@@ -1,6 +1,7 @@
 .sidebar-container {
     height: 100vh;
     padding-top: var(--header-height);
+    background-color: #FDF9F0;
     position: fixed;
     top: 0;
     z-index: 10;
