@@ -4,9 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #FDF9F0;
 }
 body {
+    background-color: #FDF9F0;
     overflow-x: hidden;
 }
 .top-content {
@@ -732,22 +732,6 @@ body {
     position: relative;
     background: transparent;
 }
-.gazette-one::before {
-    font-family: 'Ariel', sans-serif;
-    content: "December 10, 2025";
-    font-size: var(--gazetteDate-fs);
-    padding: var(--gazetteOneDate-pd);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.598);
-    color: #00340B;
-    border-radius: 9999px;
-    position: absolute;
-    top: var(--gazetteDate-top);
-    left: var(--gazetteDate-left);
-    z-index: 1;
-}
 .gazette-img-one {
     width: var(--gazetteImg-wd);
     border-radius: var(--gazetteImg-br);
@@ -768,11 +752,10 @@ body {
     background: transparent;
 }
 .gazette-two::before {
-    font-family: 'Ariel', sans-serif;
+    font-family: Ariel, sans-serif;
     content: "January 15, 2026";
     font-size: var(--gazetteDate-fs);
     padding: var(--gazetteTwoDate-pd);
-    font-size: 500;
     display: flex;
     align-items: center;
     justify-content: center;
