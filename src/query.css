@@ -1,0 +1,92 @@
+
+
+@media (max-width: 2900px) {
+    :root {
+    /* Seventh Content CSS Responsive */
+    --seventhContent-mg: 700px 0 150px; --newspaperWrapper-wd: 90%; --newspaperWrapper-hg: 100vh; --newspaper-br: 5px;
+    --newspaperHeading-fs: 195px; --newspaperHeading-mg: 20px auto;
+    --latestNews-fs: 42px; --latestNews-pd: 15px 40px; --gazetteImgs-gap: 80px;
+    --gazetteDate-fs: 34px; --gazetteDate-top: 30px; --gazetteDate-left: 35px;
+    --gazetteOneDate-pd: 14px 33px; --gazetteTwoDate-pd: 14px 35px;
+    --gazetteImg-wd: 1000px; --gazetteImg-br: 12px;
+    --gazetteCaption-wd: 1000px; --gazetteCaption-fs: 32px; --gazetteCaption-mgTop: 10px;
+    }
+}
+
+@media (max-width: 2500px) {
+    :root {
+    /* Seventh Content CSS Responsive */
+    --seventhContent-mg: 625px 0 134px; --newspaperWrapper-wd: 90%; --newspaperWrapper-hg: 100vh; --newspaper-br: 5px;
+    --newspaperHeading-fs: 174px; --newspaperHeading-mg: 18px auto;
+    --latestNews-fs: 38px; --latestNews-pd: 14px 36px; --gazetteImgs-gap: 70px;
+    --gazetteDate-fs: 30px; --gazetteDate-top: 27px; --gazetteDate-left: 31px;
+    --gazetteOneDate-pd: 13px 30px; --gazetteTwoDate-pd: 13px 31px;
+    --gazetteImg-wd: 900px; --gazetteImg-br: 11px;
+    --gazetteCaption-wd: 900px; --gazetteCaption-fs: 29px; --gazetteCaption-mgTop: 9px;
+    }
+}
+
+@media (max-width: 2200px) {
+    :root {
+    /* Seventh Content CSS Responsive */
+    --seventhContent-mg: 550px 0 118px; --newspaperWrapper-wd: 90%; --newspaperWrapper-hg: 100vh; --newspaper-br: 4px;
+    --newspaperHeading-fs: 153px; --newspaperHeading-mg: 16px auto;
+    --latestNews-fs: 33px; --latestNews-pd: 12px 31px; --gazetteImgs-gap: 60px;
+    --gazetteDate-fs: 27px; --gazetteDate-top: 24px; --gazetteDate-left: 27px;
+    --gazetteOneDate-pd: 11px 26px; --gazetteTwoDate-pd: 11px 28px;
+    --gazetteImg-wd: 790px; --gazetteImg-br: 10px;
+    --gazetteCaption-wd: 790px; --gazetteCaption-fs: 26px; --gazetteCaption-mgTop: 8px;
+    }
+}
+
+@media (max-width: 2000px) {
+    :root {
+    /* Seventh Content CSS Responsive */
+    --seventhContent-mg: 500px 0 107px; --newspaperWrapper-wd: 90%; --newspaperWrapper-hg: 100vh; --newspaper-br: 4px;
+    --newspaperHeading-fs: 139px; --newspaperHeading-mg: 15px auto;
+    --latestNews-fs: 30px; --latestNews-pd: 11px 28px; --gazetteImgs-gap: 54px;
+    --gazetteDate-fs: 24px; --gazetteDate-top: 21px; --gazetteDate-left: 25px;
+    --gazetteOneDate-pd: 10px 24px; --gazetteTwoDate-pd: 10px 25px;
+    --gazetteImg-wd: 720px; --gazetteImg-br: 9px;
+    --gazetteCaption-wd: 720px; --gazetteCaption-fs: 23px; --gazetteCaption-mgTop: 8px;
+    }
+}
+
+@media (max-width: 1800px) {
+    :root {
+    /* Seventh Content CSS Responsive */
+    --seventhContent-mg: 450px 0 96px; --newspaperWrapper-wd: 90%; --newspaperWrapper-hg: 100vh; --newspaper-br: 4px;
+    --newspaperHeading-fs: 125px; --newspaperHeading-mg: 13px auto;
+    --latestNews-fs: 27px; --latestNews-pd: 10px 25px; --gazetteImgs-gap: 50px;
+    --gazetteDate-fs: 22px; --gazetteDate-top: 19px; --gazetteDate-left: 22px;
+    --gazetteOneDate-pd: 9px 22px; --gazetteTwoDate-pd: 9px 23px;
+    --gazetteImg-wd: 650px; --gazetteImg-br: 8px;
+    --gazetteCaption-wd: 650px; --gazetteCaption-fs: 21px; --gazetteCaption-mgTop: 7px;
+    }
+}
+
+@media (max-width: 1600px) {
+    :root {
+    /* Seventh Content CSS Responsive */
+    --seventhContent-mg: 400px 0 86px; --newspaperWrapper-wd: 90%; --newspaperWrapper-hg: 100vh; --newspaper-br: 3px;
+    --newspaperHeading-fs: 111px; --newspaperHeading-mg: 12px auto;
+    --latestNews-fs: 24px; --latestNews-pd: 9px 22px; --gazetteImgs-gap: 45px;
+    --gazetteDate-fs: 19px; --gazetteDate-top: 17px; --gazetteDate-left: 20px;
+    --gazetteOneDate-pd: 8px 19px; --gazetteTwoDate-pd: 8px 20px;
+    --gazetteImg-wd: 575px; --gazetteImg-br: 7px;
+    --gazetteCaption-wd: 575px; --gazetteCaption-fs: 18px; --gazetteCaption-mgTop: 6px;
+    }
+}
+
+@media (max-width: 1440px) {
+    :root {
+    /* Seventh Content CSS Responsive */
+    --seventhContent-mg: 360px 0 77px; --newspaperWrapper-wd: 90%; --newspaperWrapper-hg: 100vh; --newspaper-br: 3px;
+    --newspaperHeading-fs: 100px; --newspaperHeading-mg: 10px auto;
+    --latestNews-fs: 22px; --latestNews-pd: 8px 20px; --gazetteImgs-gap: 40px;
+    --gazetteDate-fs: 17px; --gazetteDate-top: 15px; --gazetteDate-left: 18px;
+    --gazetteOneDate-pd: 7px 17px; --gazetteTwoDate-pd: 7px 18px;
+    --gazetteImg-wd: 515px; --gazetteImg-br: 6px;
+    --gazetteCaption-wd: 515px; --gazetteCaption-fs: 16px; --gazetteCaption-mgTop: 6px;
+    }
+}

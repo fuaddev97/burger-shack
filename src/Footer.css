@@ -1,0 +1,558 @@
+.light-green {
+    font-family: 'Poppins', sans-serif;
+    padding: var(--lightDarkGreen-pd);
+    background-color: #2A5732;
+    display: flex;
+    justify-content: space-between;
+}
+.light-green * {
+    background-color: #2A5732;
+    color: #FFF2E6;
+}
+.about-the-resturant {
+    width: var(--aboutTheResturant-wd);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    row-gap: var(--aboutTheResturant-rowGap);
+    justify-content: space-between;
+}
+.about-the-resturant a {
+    text-decoration: none;
+    font-size: var(--aboutTheResturant-fs);
+}
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--socialMedia-gap);
+}
+.follow-us {
+    font-size: var(--followUs-fs);
+    font-style: italic;
+}
+.icons {
+    display: flex;
+    gap: var(--icons-gap);
+}
+.face a, .insta a, .tik a, .linked a {
+    font-size: var(--icons-fs);
+    padding: var(--icons-pd);
+    background-color: #FFF2E6;
+    border-radius: 50%;
+}
+.fa-brands {
+    color: #2A5732;
+    background-color: #FFF2E6;
+    border-radius: 50%;
+}
+.dark-green {
+    font-family: 'Poppins', sans-serif;
+    padding: var(--lightDarkGreen-pd);
+    background-color: #00340B;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+.dark-green * {
+    background-color: #00340B;
+    color: #FFF2E6;
+}
+.legality {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: start;
+    gap: var(--legality-gap);
+}
+.legality a {
+    font-size: var(--legality-fs);
+    text-decoration: none;
+}
+.burger-shack-bricks {
+    width: var(--burgerShackBricks-wd);
+}
+.burger-shack-bricks-responsive {
+    width: var(--burgerShackBricks-wd);
+    display: none;
+}
+.est-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--estDate-gap);
+    justify-self: end;
+}
+.date {
+    font-size: var(--date-fs);
+    font-style: italic;
+}
+.back-to-top {
+    font-size: var(--backToTop-fs);
+    color: #FFF2E6;
+    background-color: #2A5732;
+    border: 1px solid #FFF2E6;
+    border-radius: var(--border-rd);
+    padding: var(--backToTop-pd);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    gap: var(--backToTop-gap);
+}
+.fa-arrow-up {
+    background-color: #2A5732;
+}
+.back-to-top span {
+    background-color: #2A5732;
+}
+
+@media (max-width: 2800px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 80px 160px;
+        --aboutTheResturant-wd: 65%;
+        --aboutTheResturant-rowGap: 10px;
+        --aboutTheResturant-fs: 35px;
+        --socialMedia-gap: 25px;
+        --followUs-fs: 35px;
+        --icons-gap: 20px;
+        --icons-fs: 45px;
+        --icons-pd: 14px;
+
+        /* Dark Green Footer Responsive CSS */
+        --legality-gap: 10px;
+        --legality-fs: 40px;
+        --burgerShackBricks-wd: 1200px;
+        --estDate-gap: 20px;
+        --date-fs: 40px;
+        --backToTop-fs: 38px;
+        --border-rd: 5px;
+        --backToTop-pd: 15px 30px 15px 20px;
+        --backToTop-gap: 15px;
+    }
+}
+@media (max-width: 2500px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+       --lightDarkGreen-pd: 71px 143px;
+       --aboutTheResturant-wd: 65%;
+       --aboutTheResturant-rowGap: 9px;
+       --aboutTheResturant-fs: 31px;
+       --socialMedia-gap: 22px;
+       --followUs-fs: 31px;
+       --icons-gap: 18px;
+       --icons-fs: 40px;
+       --icons-pd: 13px;
+
+        /* Dark Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 71px 143px;
+        --legality-gap: 9px;
+        --legality-fs: 36px;
+        --burgerShackBricks-wd: 1071px;
+        --estDate-gap: 18px;
+        --date-fs: 36px;
+        --backToTop-fs: 34px;
+        --border-rd: 5px;
+        --backToTop-pd: 13px 27px 13px 18px;
+        --backToTop-gap: 13px;
+    }
+}
+@media (max-width: 2200px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 63px 126px;
+        --aboutTheResturant-wd: 65%;
+        --aboutTheResturant-rowGap: 8px;
+        --aboutTheResturant-fs: 28px;
+        --socialMedia-gap: 20px;
+        --followUs-fs: 28px;
+        --icons-gap: 16px;
+        --icons-fs: 35px;
+        --icons-pd: 11px;
+
+        /* Dark Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 63px 126px;
+        --legality-gap: 8px;
+        --legality-fs: 31px;
+        --burgerShackBricks-wd: 943px;
+        --estDate-gap: 16px;
+        --date-fs: 31px;
+        --backToTop-fs: 30px;
+        --border-rd: 4px;
+        --backToTop-pd: 12px 24px 12px 16px;
+        --backToTop-gap: 12px;
+    }
+}
+@media (max-width: 2000px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 57px 114px;
+        --aboutTheResturant-wd: 65%;
+        --aboutTheResturant-rowGap: 7px;
+        --aboutTheResturant-fs: 25px;
+        --socialMedia-gap: 18px;
+        --followUs-fs: 25px;
+        --icons-gap: 14px;
+        --icons-fs: 32px;
+        --icons-pd: 10px;
+
+        /* Dark Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 57px 114px;
+        --legality-gap: 7px;
+        --legality-fs: 29px;
+        --burgerShackBricks-wd: 857px;
+        --estDate-gap: 14px;
+        --date-fs: 29px;
+        --backToTop-fs: 27px;
+        --border-rd: 4px;
+        --backToTop-pd: 11px 21px 11px 14px;
+        --backToTop-gap: 11px;
+    }
+}
+@media (max-width: 1800px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 51px 103px;
+        --aboutTheResturant-wd: 65%;
+        --aboutTheResturant-rowGap: 6px;
+        --aboutTheResturant-fs: 23px;
+        --socialMedia-gap: 16px;
+        --followUs-fs: 23px;
+        --icons-gap: 13px;
+        --icons-fs: 29px;
+        --icons-pd: 9px;
+
+        /* Dark Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 51px 103px;
+        --legality-gap: 6px;
+        --legality-fs: 26px;
+        --burgerShackBricks-wd: 771px;
+        --estDate-gap: 13px;
+        --date-fs: 26px;
+        --backToTop-fs: 24px;
+        --border-rd: 3px;
+        --backToTop-pd: 10px 19px 10px 13px;
+        --backToTop-gap: 10px;
+    }
+}
+@media (max-width: 1600px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 46px 91px;
+        --aboutTheResturant-wd: 65%;
+        --aboutTheResturant-rowGap: 6px;
+        --aboutTheResturant-fs: 20px;
+        --socialMedia-gap: 14px;
+        --followUs-fs: 20px;
+        --icons-gap: 11px;
+        --icons-fs: 26px;
+        --icons-pd: 8px;
+
+        /* Dark Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 46px 91px;
+        --legality-gap: 6px;
+        --legality-fs: 23px;
+        --burgerShackBricks-wd: 686px;
+        --estDate-gap: 11px;
+        --date-fs: 23px;
+        --backToTop-fs: 22px;
+        --border-rd: 3px;
+        --backToTop-pd: 9px 17px 9px 11px;
+        --backToTop-gap: 9px;
+    }
+}
+@media (max-width: 1440px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 41px 82px;
+        --aboutTheResturant-wd: 65%;
+        --aboutTheResturant-rowGap: 5px;
+        --aboutTheResturant-fs: 18px;
+        --socialMedia-gap: 13px;
+        --followUs-fs: 18px;
+        --icons-gap: 10px;
+        --icons-fs: 23px;
+        --icons-pd: 7px;
+
+        /* Dark Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 41px 82px;
+        --legality-gap: 5px;
+        --legality-fs: 21px;
+        --burgerShackBricks-wd: 617px;
+        --estDate-gap: 10px;
+        --date-fs: 21px;
+        --backToTop-fs: 20px;
+        --border-rd: 3px;
+        --backToTop-pd: 8px 15px 8px 10px;
+        --backToTop-gap: 8px;
+    }
+}
+@media (max-width: 1200px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 34px 69px;
+        --aboutTheResturant-wd: 65%;
+        --aboutTheResturant-rowGap: 4px;
+        --aboutTheResturant-fs: 15px;
+        --socialMedia-gap: 11px;
+        --followUs-fs: 15px;
+        --icons-gap: 9px;
+        --icons-fs: 19px;
+        --icons-pd: 6px;
+
+        /* Dark Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 34px 69px;
+        --legality-gap: 4px;
+        --legality-fs: 17px;
+        --burgerShackBricks-wd: 514px;
+        --estDate-gap: 9px;
+        --date-fs: 17px;
+        --backToTop-fs: 16px;
+        --border-rd: 2px;
+        --backToTop-pd: 6px 13px 6px 9px;
+        --backToTop-gap: 6px;
+    }
+}
+@media (max-width: 1024px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 29px 59px;
+        --aboutTheResturant-wd: 65%;
+        --aboutTheResturant-rowGap: 4px;
+        --aboutTheResturant-fs: 13px;
+        --socialMedia-gap: 9px;
+        --followUs-fs: 13px;
+        --icons-gap: 7px;
+        --icons-fs: 16px;
+        --icons-pd: 5px;
+
+        /* Dark Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 29px 59px;
+        --legality-gap: 4px;
+        --legality-fs: 15px;
+        --burgerShackBricks-wd: 439px;
+        --estDate-gap: 7px;
+        --date-fs: 15px;
+        --backToTop-fs: 14px;
+        --border-rd: 2px;
+        --backToTop-pd: 5px 11px 5px 7px;
+        --backToTop-gap: 5px;
+    }
+}
+@media (max-width: 768px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 40px 0;
+        --aboutTheResturant-wd: auto;
+        --aboutTheResturant-mg: 0 auto 30px;
+        --aboutTheResturant-rowGap: 8px;
+        --aboutTheResturant-fs: 16px;
+        --socialMedia-gap: 14px;
+        --followUs-fs: 16px;
+        --icons-gap: 9px;
+        --icons-fs: 18px;
+        --icons-pd: 8px;
+        
+        /* Dark Green Footer Responsive CSS */
+        --darkGreen-pd: 25px 0 0;
+        --legality-gap: 6px;
+        --legality-fs: 16px;
+        --burgerShackBricks-wd: 500px;
+        --estDate-gap: 12px;
+        --date-fs: 16px;
+        --backToTop-fs: 18px;
+        --border-rd: 4px;
+        --backToTop-pd: 12px 18px 12px 14px;
+        --backToTop-gap: 10px;
+    }
+    .light-green {
+        flex-direction: column;
+    }
+    .about-the-resturant {
+        margin: var(--aboutTheResturant-mg);
+        text-align: center;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(9, auto);
+    }
+    .dark-green {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        gap: 10px;
+        padding: var(--darkGreen-pd);
+    }
+    .legality, .est-date {
+        justify-self: center;
+    }
+    .burger-shack-bricks {
+        display: none;
+    }
+    .burger-shack-bricks-responsive {
+        display: block;
+        justify-self: center;
+    }
+}
+@media (max-width: 700px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 37px 0;
+        --aboutTheResturant-wd: auto;
+        --aboutTheResturant-mg: 0 auto 28px;
+        --aboutTheResturant-rowGap: 7px;
+        --aboutTheResturant-fs: 15px;
+        --socialMedia-gap: 13px;
+        --followUs-fs: 15px;
+        --icons-gap: 8px;
+        --icons-fs: 17px;
+        --icons-pd: 7px;
+
+        /* Dark Green Footer Responsive CSS */
+        --darkGreen-pd: 23px 0 0;
+        --legality-gap: 6px;
+        --legality-fs: 15px;
+        --burgerShackBricks-wd: 456px;
+        --estDate-gap: 11px;
+        --date-fs: 15px;
+        --backToTop-fs: 17px;
+        --border-rd: 4px;
+        --backToTop-pd: 11px 16px 11px 13px;
+        --backToTop-gap: 9px;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 34px 0;
+        --aboutTheResturant-wd: auto;
+        --aboutTheResturant-mg: 0 auto 25px;
+        --aboutTheResturant-rowGap: 7px;
+        --aboutTheResturant-fs: 14px;
+        --socialMedia-gap: 12px;
+        --followUs-fs: 14px;
+        --icons-gap: 8px;
+        --icons-fs: 16px;
+        --icons-pd: 7px;
+
+        /* Dark Green Footer Responsive CSS */
+        --darkGreen-pd: 21px 0 0;
+        --legality-gap: 5px;
+        --legality-fs: 13px;
+        --burgerShackBricks-wd: 391px;
+        --estDate-gap: 10px;
+        --date-fs: 13px;
+        --backToTop-fs: 16px;
+        --border-rd: 4px;
+        --backToTop-pd: 10px 14px 10px 12px;
+        --backToTop-gap: 8px;
+    }
+}
+@media (max-width: 500px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 31px 0;
+        --aboutTheResturant-wd: auto;
+        --aboutTheResturant-mg: 0 auto 23px;
+        --aboutTheResturant-rowGap: 6px;
+        --aboutTheResturant-fs: 13px;
+        --socialMedia-gap: 11px;
+        --followUs-fs: 13px;
+        --icons-gap: 7px;
+        --icons-fs: 15px;
+        --icons-pd: 6px;
+
+        /* Dark Green Footer Responsive CSS */
+        --darkGreen-pd: 19px 0 0;
+        --legality-gap: 5px;
+        --legality-fs: 12px;
+        --burgerShackBricks-wd: 326px;
+        --estDate-gap: 9px;
+        --date-fs: 12px;
+        --backToTop-fs: 15px;
+        --border-rd: 3px;
+        --backToTop-pd: 9px 13px 9px 11px;
+        --backToTop-gap: 8px;
+    }
+}
+@media (max-width: 425px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 28px 0;
+        --aboutTheResturant-wd: auto;
+        --aboutTheResturant-mg: 0 auto 21px;
+        --aboutTheResturant-rowGap: 6px;
+        --aboutTheResturant-fs: 12px;
+        --socialMedia-gap: 10px;
+        --followUs-fs: 12px;
+        --icons-gap: 7px;
+        --icons-fs: 14px;
+        --icons-pd: 6px;
+
+        /* Dark Green Footer Responsive CSS */
+        --darkGreen-pd: 17px 0 0;
+        --legality-gap: 5px;
+        --legality-fs: 11px;
+        --burgerShackBricks-wd: 277px;
+        --estDate-gap: 8px;
+        --date-fs: 11px;
+        --backToTop-fs: 14px;
+        --border-rd: 3px;
+        --backToTop-pd: 8px 11px 8px 10px;
+        --backToTop-gap: 7px;
+    }
+}
+@media (max-width: 375px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 25px 0;
+        --aboutTheResturant-wd: auto;
+        --aboutTheResturant-mg: 0 auto 19px;
+        --aboutTheResturant-rowGap: 5px;
+        --aboutTheResturant-fs: 11px;
+        --socialMedia-gap: 9px;
+        --followUs-fs: 11px;
+        --icons-gap: 6px;
+        --icons-fs: 13px;
+        --icons-pd: 5px;
+
+        /* Dark Green Footer Responsive CSS */
+        --darkGreen-pd: 15px 0 0;
+        --legality-gap: 4px;
+        --legality-fs: 10px;
+        --burgerShackBricks-wd: 244px;
+        --estDate-gap: 7px;
+        --date-fs: 10px;
+        --backToTop-fs: 13px;
+        --border-rd: 3px;
+        --backToTop-pd: 7px 10px 7px 9px;
+        --backToTop-gap: 6px;
+    }
+}
+@media (max-width: 320px) {
+    :root {
+        /* Light Green Footer Responsive CSS */
+        --lightDarkGreen-pd: 22px 0;
+        --aboutTheResturant-wd: auto;
+        --aboutTheResturant-mg: 0 auto 17px;
+        --aboutTheResturant-rowGap: 5px;
+        --aboutTheResturant-fs: 10px;
+        --socialMedia-gap: 8px;
+        --followUs-fs: 10px;
+        --icons-gap: 5px;
+        --icons-fs: 12px;
+        --icons-pd: 5px;
+
+        /* Dark Green Footer Responsive CSS */
+        --darkGreen-pd: 13px 0 0;
+        --legality-gap: 4px;
+        --legality-fs: 9px;
+        --burgerShackBricks-wd: 208px;
+        --estDate-gap: 6px;
+        --date-fs: 9px;
+        --backToTop-fs: 12px;
+        --border-rd: 3px;
+        --backToTop-pd: 6px 9px 6px 8px;
+        --backToTop-gap: 6px;
+    }
+}
