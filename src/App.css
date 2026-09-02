@@ -932,7 +932,7 @@ body {
         display: none;
     }
 }
-@media (max-width: 2500px) {
+@media (max-width: 2560px) {
     :root {
         /*Top Content CSS Responsive*/
     --topcontent-mgTop: 250px;
