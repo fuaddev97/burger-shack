@@ -81,120 +81,128 @@
 
 @media (max-width: 2900px) {
     :root {
-    --header-height: 250px;
+    --header-height: 200px;
     --header-pd: 20px 80px;
-    --sidebar-fs: 50px;
-    --headbtn-fs: 40px;
+    --sidebar-fs: 46px;
+    --headbtn-fs: 36px;
     --leftside-gap: 30px;
     --border-rd: 7px;
     --sidebar-pd: 10px;
     --headbtn-pd: 15px 28px;
-    --logo-wd: 200px;
+    --logo-wd: 160px;
     --hover-tr: translateY(-4px);
     }
 }
-@media (max-width: 2500px) {
+@media (max-width: 2560px) {
     :root {
-    --header-height: 220px;
-    --header-pd: 20px 70px;
-    --sidebar-fs: 45px;
-    --headbtn-fs: 35px;
-    --leftside-gap: 26px;
-    --border-rd: 7px;
-    --sidebar-pd: 7px;
-    --headbtn-pd: 13px 25px;
-    --logo-wd: 170px;
+        --header-height: 182.86px;
+        --header-pd: 18.29px 73.14px;
+        --sidebar-fs: 42.06px;
+        --headbtn-fs: 32.91px;
+        --leftside-gap: 27.43px;
+        --border-rd: 6.4px;
+        --sidebar-pd: 9.14px;
+        --headbtn-pd: 13.71px 25.6px;
+        --logo-wd: 146.29px;
+        --hover-tr: translateY(-3.66px);
     }
 }
 @media (max-width: 2200px) {
     :root {
-    --header-height: 200px;
-    --header-pd: 20px 60px;
-    --sidebar-fs: 42px;
-    --headbtn-fs: 32px;
-    --leftside-gap: 24px;
-    --border-rd: 7px;
-    --sidebar-pd: 7px;
-    --headbtn-pd: 13px 25px;
-    --logo-wd: 150px;
+        --header-height: 157.14px;
+        --header-pd: 15.71px 62.86px;
+        --sidebar-fs: 36.14px;
+        --headbtn-fs: 28.29px;
+        --leftside-gap: 23.57px;
+        --border-rd: 5.5px;
+        --sidebar-pd: 7.86px;
+        --headbtn-pd: 11.79px 22px;
+        --logo-wd: 125.71px;
+        --hover-tr: translateY(-3.14px);
     }
 }
 @media (max-width: 2000px) {
     :root {
-    --header-height: 175px;
-    --header-pd: 20px 55px;
-    --sidebar-fs: 40px;
-    --headbtn-fs: 30px;
-    --leftside-gap: 22px;
-    --border-rd: 6px;
-    --sidebar-pd: 5px;
-    --headbtn-pd: 10px 22px;
-    --logo-wd: 135px;
-    --hover-tr: translateY(-3px);
+        --header-height: 142.86px;
+        --header-pd: 14.29px 57.14px;
+        --sidebar-fs: 32.86px;
+        --headbtn-fs: 25.71px;
+        --leftside-gap: 21.43px;
+        --border-rd: 5px;
+        --sidebar-pd: 7.14px;
+        --headbtn-pd: 10.71px 20px;
+        --logo-wd: 114.29px;
+        --hover-tr: translateY(-2.86px);
     }
 }
 @media (max-width: 1800px) {
     :root {
-    --header-height: 160px;
-    --header-pd: 20px 50px;
-    --sidebar-fs: 35px;
-    --headbtn-fs: 25px;
-    --leftside-gap: 18px;
-    --border-rd: 6px;
-    --sidebar-pd: 5px;
-    --headbtn-pd: 10px 22px;
-    --logo-wd: 120px;
+        --header-height: 128.57px;
+        --header-pd: 12.86px 51.43px;
+        --sidebar-fs: 29.57px;
+        --headbtn-fs: 23.14px;
+        --leftside-gap: 19.29px;
+        --border-rd: 4.5px;
+        --sidebar-pd: 6.43px;
+        --headbtn-pd: 9.64px 18px;
+        --logo-wd: 102.86px;
+        --hover-tr: translateY(-2.57px);
     }
 }
 @media (max-width: 1600px) {
     :root {
-    --header-height: 145px;
-    --header-pd: 20px 45px;
-    --sidebar-fs: 30px;
-    --headbtn-fs: 20px;
-    --leftside-gap: 16px;
-    --border-rd: 5px;
-    --sidebar-pd: 4px;
-    --headbtn-pd: 9px 18px;
-    --logo-wd: 105px;
+        --header-height: 114.29px;
+        --header-pd: 11.43px 45.71px;
+        --sidebar-fs: 26.29px;
+        --headbtn-fs: 20.57px;
+        --leftside-gap: 17.14px;
+        --border-rd: 4px;
+        --sidebar-pd: 5.71px;
+        --headbtn-pd: 8.57px 16px;
+        --logo-wd: 91.43px;
+        --hover-tr: translateY(-2.29px);
     }
 }
-@media (max-width: 1500px) {
+@media (max-width: 1440px) {
     :root {
-    --header-height: 130px;
-    --header-pd: 20px 50px;
-    --sidebar-fs: 24px;
-    --headbtn-fs: 18px;
-    --leftside-gap: 15px;
-    --border-rd: 4px;
-    --sidebar-pd: 3px;
-    --headbtn-pd: 9px 18px;
-    --logo-wd: 95px;
-    --hover-tr: translateY(-2px);
+        --header-height: 102.86px;
+        --header-pd: 10.29px 41.14px;
+        --sidebar-fs: 23.66px;
+        --headbtn-fs: 18.51px;
+        --leftside-gap: 15.43px;
+        --border-rd: 3.6px;
+        --sidebar-pd: 5.14px;
+        --headbtn-pd: 7.71px 14.4px;
+        --logo-wd: 82.29px;
+        --hover-tr: translateY(-2.06px);
     }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
     :root {
-    --header-height: 110px;
-    --sidebar-fs: 20px;
-    --headbtn-fs: 16px;
-    --leftside-gap: 13px;
-    --border-rd: 4px;
-    --sidebar-pd: 5px;
-    --headbtn-pd: 8px 16px;
-    --logo-wd: 80px;
+        --header-height: 85.71px;
+        --header-pd: 8.57px 34.29px;
+        --sidebar-fs: 19.71px;
+        --headbtn-fs: 15.43px;
+        --leftside-gap: 12.86px;
+        --border-rd: 3px;
+        --sidebar-pd: 4.29px;
+        --headbtn-pd: 6.43px 12px;
+        --logo-wd: 68.57px;
+        --hover-tr: translateY(-1.71px);
     }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     :root {
-    --header-height: 100px;
-    --sidebar-fs: 18px;
-    --headbtn-fs: 14px;
-    --leftside-gap: 10px;
-    --border-rd: 4px;
-    --sidebar-pd: 4px;
-    --headbtn-pd: 7px 14px;
-    --logo-wd: 65px;
+        --header-height: 73.14px;
+        --header-pd: 7.31px 29.26px;
+        --sidebar-fs: 16.82px;
+        --headbtn-fs: 13.17px;
+        --leftside-gap: 10.97px;
+        --border-rd: 2.56px;
+        --sidebar-pd: 3.66px;
+        --headbtn-pd: 5.49px 10.24px;
+        --logo-wd: 58.51px;
+        --hover-tr: translateY(-1.46px);
     }
 }
 @media (max-width: 768px) {

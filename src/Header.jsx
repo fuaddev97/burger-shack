@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import './Header.css'
 import BurgerShackLogo from './assets/burger-shack-logo.png'
 
