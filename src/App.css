@@ -732,6 +732,22 @@ body {
     position: relative;
     background: transparent;
 }
+.gazette-one::before {
+    font-family: 'Ariel', sans-serif;
+    content: "December 10, 2025";
+    font-size: var(--gazetteDate-fs);
+    padding: var(--gazetteOneDate-pd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.598);
+    color: #00340B;
+    border-radius: 9999px;
+    position: absolute;
+    top: var(--gazetteDate-top);
+    left: var(--gazetteDate-left);
+    z-index: 1;
+}
 .gazette-img-one {
     width: var(--gazetteImg-wd);
     border-radius: var(--gazetteImg-br);
