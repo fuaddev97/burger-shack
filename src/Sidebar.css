@@ -239,16 +239,10 @@
         --logoContainer-wnh: 21px;
         --listHover-pdLeft: 0px;
     }
-    .list-and-image {
-        display: flex;
-        align-items: center;
-    }
-    .list ul {
-        align-items: center;
-    }
     .logo-container {
     width: 0;
     height: 0;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.402);
     }
     .logo-container-visible {
     width: var(--logoContainer-wnh);
@@ -256,7 +250,8 @@
     }
     .list ul li {
         font-size: var(--welcome-fs);
-        text-align: center;
+        color: #016016;
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.306);
     }
 }
 @media (max-width: 600px) {

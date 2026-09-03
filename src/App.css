@@ -124,7 +124,7 @@ body {
     height: var(--branches-hg);
     padding: var(--branches-pd);
     background-color: #ffffff;
-    border-radius: 0;
+    border-radius: var(--border-rd);
     border: 1px solid #00340B;
     display: flex;
     justify-content: space-between;
@@ -1956,12 +1956,12 @@ body {
     --topcontent-mgTop: 180px;
     --welcome-fs: 2.5rem;
     --branches-wd: 300px;
-    --branches-hg: 35px;
-    --branches-fs: 16px;
+    --branches-hg: 30px;
+    --branches-fs: 14px;
     --branches-pd: 0 16px;
     --branchList-hg: 30px;
-    --researchBtn-fs: 18px;
-    --researchBtn-pd: 9px 18px;
+    --researchBtn-fs: 16px;
+    --researchBtn-pd: 8px 18px;
     --border-rd: 5px;
     --intro-gap: 23px;
     --researchBranches-gap: 8px;
@@ -1969,13 +1969,13 @@ body {
     /*Fourth Content CSS Responsive*/
     --fourthContent-mgTop: 200px;
     --modelBurger-br: 8px;
-    --burgerOfTheDay-wd: 340px;
-    --infoContentPara-wd: 350px;
+    --burgerOfTheDay-wd: 360px;
+    --infoContentPara-wd: 400px;
     --recipe-fs: 14px;
     --recipe-fw: 500;
-    --twoButtons-fs: 16px;
-    --twoButtons-pd: 8px 16px;
-    --twoButtons-gap: 12px;
+    --twoButtons-fs: 18px;
+    --twoButtons-pd: 8px 30px;
+    --twoButtons-gap: 10px;
     
         /* Fifth Content CSS Responsive */
     --fifthContent-mgTop: 160px; 
@@ -2010,22 +2010,24 @@ body {
     /* Seventh Content CSS Responsive */
     --seventhContent-mg: 300px 0 65px;
     --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 120vh;
+    --newspaperWrapper-hg: 190vh;
     --newspaper-br: 3px;
     --newspaperHeading-fs: 70px;
     --newspaperHeading-mg: 8px auto;
-    --latestNews-fs: 17px;
-    --latestNews-pd: 7px 16px;
-    --gazetteImgs-gap: 35px;
-    --gazetteImg-wd: 295px;
+    --latestNews-fs: 18px;
+    --latestNews-pd: 8px 30px;
+    --gazetteImgs-gap: 20px;
+    --gazetteImg-wd: 500px;
     --gazetteImg-br: 5px;
-    --gazetteCaption-wd: 295px;
-    --gazetteCaption-fs: 16px; 
+    --gazetteCaption-wd: 500px;
+    --gazetteCaption-fs: 15px; 
     --gazetteCaption-mgTop: 6px;
-    --gazetteNews-gap: 15px;
-    --gazetteNewsSmallPara-fs: 12px;
-    --smallScreenDate-fs: 25px;
-    --gazetteDatePara-gap: 10px;
+    --gazetteNews-gap: 5px;
+    --gazetteDate-fs: 15px; 
+    --gazetteDate-top: 20px; 
+    --gazetteDate-left: 15px;
+    --gazetteOneDate-pd: 5px 16px; 
+    --gazetteTwoDate-pd: 5px 16px;
     }
     .left-img, .right-img, .second-content, .third-content {
         display: none;
@@ -2064,11 +2066,11 @@ body {
     }
     
     .fourth-content {
-        height: 140vh;
+        height: 120vh;
     }
     .model-burger {
         width: 70%;
-        grid-template-rows: 55% 45%;
+        grid-template-rows: 50% 50%;
         grid-template-columns: 100%;
     }
     .two-buttons {
@@ -2082,29 +2084,9 @@ body {
     }
     .gazette-one, .gazette-two {
         display: flex;
+        flex-direction: column;
         align-items: flex-end;
         gap: var(--gazetteNews-gap);
-    }
-    .gazette-one::before, .gazette-two::before {
-        display: none;
-    }
-    .gazette-one p, .gazette-two p {
-        display: flex;
-        flex-direction: column;
-        gap: var(--gazetteDatePara-gap);
-    }
-    .small-screen-date {
-        font-family: Impact, fantasy;
-        font-weight: 800;
-        font-size: var(--smallScreenDate-fs);
-        letter-spacing: 0.8px;
-        display: block;
-        background: transparent;
-    }
-    .small-screen-paragraph {
-        display: none;
-        font-size: var(--gazetteNewsSmallPara-fs);
-        background: transparent;
     }
     
 }
@@ -2112,17 +2094,28 @@ body {
     :root {
         /*Top Content CSS Responsive*/
     --topcontent-mgTop: 180px;
-    --welcome-fs: 2.3rem;
+    --welcome-fs: 2.279rem;
     --branches-wd: 300px;
     --branches-hg: 35px;
-    --branches-fs: 16px;
-    --branches-pd: 0 16px;
-    --branchList-hg: 30px;
-    --researchBtn-fs: 18px;
-    --researchBtn-pd: 9px 18px;
-    --border-rd: 4px;
-    --intro-gap: 20px;
-    --researchBranches-gap: 5px;
+    --branches-fs: 14.5px;
+    --branches-pd: 0px 14.58px;
+    --branchList-hg: 27.34px;
+    --researchBtn-fs: 14.58px;
+    --researchBtn-pd: 7.29px 16.41px;
+    --border-rd: 4.56px;
+    --intro-gap: 20.96px;
+    --researchBranches-gap: 7.29px;
+    
+        /*Fourth Content CSS Responsive*/
+    --fourthContent-mgTop: 182.29px;
+    --modelBurger-br: 7.29px;
+    --burgerOfTheDay-wd: 328.12px;
+    --infoContentPara-wd: 364.58px;
+    --recipe-fs: 12.76px;
+    --recipe-fw: 500;
+    --twoButtons-fs: 16.41px;
+    --twoButtons-pd: 7.29px 27.34px;
+    --twoButtons-gap: 9.11px;
     
         /* Fifth Content CSS Responsive */
     --fifthContent-mgTop: 150px; 
@@ -2154,58 +2147,157 @@ body {
     --learnAboutFranchise-pd: 9px 18px;
     --learnAboutFranchise-mgTop: 28px;
     
-    /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 300px 0 65px;
+        /*Seventh Content CSS Responsive*/
+    --seventhContent-mg: 273.44px 0px 59.24px;
     --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 100vh;
-    --newspaper-br: 3px;
-    --newspaperHeading-fs: 59px;
-    --newspaperHeading-mg: 8px auto;
-    --latestNews-fs: 15px;
-    --latestNews-pd: 6px 14px;
-    --gazetteImgs-gap: 20px;
-    --gazetteDate-fs: 12px;
-    --gazetteDate-top: 10px;
-    --gazetteDate-left: 10px;
-    --gazetteOneDate-pd: 3px 9px;
-    --gazetteTwoDate-pd: 3px 9px;
-    --gazetteImg-wd: 250px;
-    --gazetteImg-br: 4px;
-    --gazetteCaption-wd: 250px;
-    --gazetteCaption-fs: 14px; 
-    --gazetteCaption-mgTop: 6px;
-    --gazetteNews-gap: 12px;
-    --gazetteNewsSmallPara-fs: 11px;
-    --smallScreenDate-fs: 25px;
-    --gazetteDatePara-gap: 10px;
+    --newspaperWrapper-hg: 175vh;
+    --newspaper-br: 2.73px;
+    --newspaperHeading-fs: 63.8px;
+    --newspaperHeading-mg: 7.29px auto;
+    --latestNews-fs: 16.41px;
+    --latestNews-pd: 7.29px 27.34px;
+    --gazetteImgs-gap: 18.23px;
+    --gazetteImg-wd: 455.73px;
+    --gazetteImg-br: 4.56px;
+    --gazetteCaption-wd: 455.73px;
+    --gazetteCaption-fs: 13.67px;
+    --gazetteCaption-mgTop: 5.47px;
+    --gazetteNews-gap: 4.56px;
+    --gazetteDate-fs: 13.67px;
+    --gazetteDate-top: 18.23px;
+    --gazetteDate-left: 13.67px;
+    --gazetteOneDate-pd: 4.56px 14.58px;
+    --gazetteTwoDate-pd: 4.56px 14.58px;
+    }
+    .slider {
+        margin-top: 72.92px;
+    }
+    .slider-track img {
+        width: 200.52px;
+        margin-right: 18.23px;
+    }
+    .fourth-content {
+        height: 115vh;
+    }
+    .model-burger {
+        width: 65%;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 100%;
+    }
+    .two-buttons {
+        flex-direction: column;
+    }
+    .gazette-imgs {
+        flex-direction: column;
+    }
+    .gazette-one, .gazette-two {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+@media (max-width: 650px) {
+    :root {
+        /*Top Content CSS Responsive*/
+    --topcontent-mgTop: 180px;
+    --welcome-fs: 2.116rem;
+    --branches-wd: 285px;
+    --branches-hg: 32px;
+    --branches-fs: 13.5px;
+    --branches-pd: 0px 13px;
+    --branchList-hg: 25.39px;
+    --researchBtn-fs: 13.54px;
+    --researchBtn-pd: 6.77px 15.23px;
+    --border-rd: 4.23px;
+    --intro-gap: 19.47px;
+    --researchBranches-gap: 6.77px;
+
+        /*Fourth Content CSS Responsive*/
+    --fourthContent-mgTop: 169.27px;
+    --modelBurger-br: 6.77px;
+    --burgerOfTheDay-wd: 304.69px;
+    --infoContentPara-wd: 338.54px;
+    --recipe-fs: 11.85px;
+    --recipe-fw: 500;
+    --twoButtons-fs: 15.23px;
+    --twoButtons-pd: 6.77px 25.39px;
+    --twoButtons-gap: 8.46px;
+
+        /*Seventh Content CSS Responsive*/
+    --seventhContent-mg: 253.91px 0px 55.01px;
+    --newspaperWrapper-wd: 90%;
+    --newspaperWrapper-hg: 160vh;
+    --newspaper-br: 2.54px;
+    --newspaperHeading-fs: 59.24px;
+    --newspaperHeading-mg: 6.77px auto;
+    --latestNews-fs: 15.23px;
+    --latestNews-pd: 6.77px 25.39px;
+    --gazetteImgs-gap: 16.93px;
+    --gazetteImg-wd: 423.18px;
+    --gazetteImg-br: 4.23px;
+    --gazetteCaption-wd: 423.18px;
+    --gazetteCaption-fs: 12.7px;
+    --gazetteCaption-mgTop: 5.08px;
+    --gazetteNews-gap: 4.23px;
+    --gazetteDate-fs: 12.7px;
+    --gazetteDate-top: 16.93px;
+    --gazetteDate-left: 12.7px;
+    --gazetteOneDate-pd: 4.23px 13.54px;
+    --gazetteTwoDate-pd: 4.23px 13.54px;
+    }
+    .slider {
+        margin-top: 67.71px;
+    }
+    .slider-track img {
+        width: 186.2px;
+        margin-right: 16.93px;
+    }
+    .fourth-content {
+        height: 110vh;
+    }
+    .model-burger {
+        width: 70%;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 100%;
+    }
+    .two-buttons {
+        flex-direction: column;
+    }
+    .gazette-imgs {
+        flex-direction: column;
+    }
+    .gazette-one, .gazette-two {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 }
 @media (max-width: 600px) {
     :root {
         /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 170px;
-    --welcome-fs: 2.0rem;
-    --branches-wd: 230px;
-    --branches-hg: 28px;
-    --branches-fs: 13px;
-    --branches-pd: 0 14px;
-    --branchList-hg: 22px;
-    --researchBtn-fs: 15px;
-    --researchBtn-pd: 5px 16px;
-    --border-rd: 3px;
-    --intro-gap: 20px;
-    --researchBranches-gap: 5px;
+    --topcontent-mgTop: 160px;
+    --welcome-fs: 1.953rem;
+    --branches-wd: 265px;
+    --branches-hg: 30px;
+    --branches-fs: 12px;
+    --branches-pd: 0px 12.5px;
+    --branchList-hg: 23.44px;
+    --researchBtn-fs: 12.5px;
+    --researchBtn-pd: 6.25px 14.06px;
+    --border-rd: 3.91px;
+    --intro-gap: 17.97px;
+    --researchBranches-gap: 6.25px;
 
     /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 200px;
-    --modelBurger-br: 8px;
-    --burgerOfTheDay-wd: 340px;
-    --infoContentPara-wd: 350px;
-    --recipe-fs: 14px;
+    --fourthContent-mgTop: 156.25px;
+    --modelBurger-br: 6.25px;
+    --burgerOfTheDay-wd: 281.25px;
+    --infoContentPara-wd: 312.5px;
+    --recipe-fs: 10.94px;
     --recipe-fw: 500;
-    --twoButtons-fs: 16px;
-    --twoButtons-pd: 8px 16px;
-    --twoButtons-gap: 12px;
+    --twoButtons-fs: 14.06px;
+    --twoButtons-pd: 6.25px 23.44px;
+    --twoButtons-gap: 7.81px;
     
         /* Fifth Content CSS Responsive */
     --fifthContent-mgTop: 140px; 
@@ -2238,65 +2330,157 @@ body {
     --learnAboutFranchise-mgTop: 28px;
     
     /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 300px 0 65px;
+    --seventhContent-mg: 234.38px 0px 50.78px;
     --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 90vh;
-    --newspaper-br: 3px;
-    --newspaperHeading-fs: 50px;
-    --newspaperHeading-mg: 8px auto;
-    --latestNews-fs: 15px;
-    --latestNews-pd: 6px 15px;
-    --gazetteImgs-gap: 20px;
-    --gazetteDate-fs: 12px;
-    --gazetteDate-top: 10px;
-    --gazetteDate-left: 10px;
-    --gazetteOneDate-pd: 3px 9px;
-    --gazetteTwoDate-pd: 3px 9px;
-    --gazetteImg-wd: 200px;
-    --gazetteImg-br: 4px;
-    --gazetteCaption-wd: 200px;
-    --gazetteCaption-fs: 12px;
-    --gazetteCaption-mgTop: 6px;
-    --gazetteNews-gap: 10px;
-    --smallScreenDate-fs: 22px;
-    --gazetteDatePara-gap: 8px;
+    --newspaperWrapper-hg: 145vh;
+    --newspaper-br: 2.34px;
+    --newspaperHeading-fs: 54.69px;
+    --newspaperHeading-mg: 6.25px auto;
+    --latestNews-fs: 14.06px;
+    --latestNews-pd: 6.25px 23.44px;
+    --gazetteImgs-gap: 15.62px;
+    --gazetteImg-wd: 390.62px;
+    --gazetteImg-br: 3.91px;
+    --gazetteCaption-wd: 390.62px;
+    --gazetteCaption-fs: 11.72px;
+    --gazetteCaption-mgTop: 4.69px;
+    --gazetteNews-gap: 3.91px;
+    --gazetteDate-fs: 11.72px;
+    --gazetteDate-top: 15.62px;
+    --gazetteDate-left: 11.72px;
+    --gazetteOneDate-pd: 3.91px 12.5px;
+    --gazetteTwoDate-pd: 3.91px 12.5px;
+    }
+    .slider {
+        margin-top: 62.5px;
+    }
+    .slider-track img {
+        width: 171.88px;
+        margin-right: 15.62px;
     }
     .fourth-content {
-        height: 140vh;
+        height: 100vh;
     }
     .model-burger {
-        width: 80%;
-        grid-template-rows: 45% 55%;
+        width: 70%;
+        grid-template-rows: 50% 50%;
         grid-template-columns: 100%;
     }
+    .two-buttons {
+        flex-direction: column;
+    }
+    .gazette-imgs {
+        flex-direction: column;
+    }
+    .gazette-one, .gazette-two {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }
+@media (max-width: 550px) {
+    :root {
+        /*Top Content CSS Responsive*/
+    --topcontent-mgTop: 150px;
+    --welcome-fs: 1.79rem;
+    --branches-wd: 250px;
+    --branches-hg: 28px;
+    --branches-fs: 12px;
+    --branches-pd: 0px 11.46px;
+    --branchList-hg: 21.48px;
+    --researchBtn-fs: 11.46px;
+    --researchBtn-pd: 5.73px 12.89px;
+    --border-rd: 3.58px;
+    --intro-gap: 16.47px;
+    --researchBranches-gap: 5.73px;
 
+        /*Fourth Content CSS Responsive*/
+    --fourthContent-mgTop: 143.23px;
+    --modelBurger-br: 5.73px;
+    --burgerOfTheDay-wd: 257.81px;
+    --infoContentPara-wd: 286.46px;
+    --recipe-fs: 10.03px;
+    --recipe-fw: 500;
+    --twoButtons-fs: 12.89px;
+    --twoButtons-pd: 5.73px 21.48px;
+    --twoButtons-gap: 7.16px;
+
+        /*Seventh Content CSS Responsive*/
+    --seventhContent-mg: 214.84px 0px 46.55px;
+    --newspaperWrapper-wd: 90%;
+    --newspaperWrapper-hg: 135vh;
+    --newspaper-br: 2.15px;
+    --newspaperHeading-fs: 50.13px;
+    --newspaperHeading-mg: 5.73px auto;
+    --latestNews-fs: 12.89px;
+    --latestNews-pd: 5.73px 21.48px;
+    --gazetteImgs-gap: 14.32px;
+    --gazetteImg-wd: 358.07px;
+    --gazetteImg-br: 3.58px;
+    --gazetteCaption-wd: 358.07px;
+    --gazetteCaption-fs: 10.74px;
+    --gazetteCaption-mgTop: 4.3px;
+    --gazetteNews-gap: 3.58px;
+    --gazetteDate-fs: 10.74px;
+    --gazetteDate-top: 14.32px;
+    --gazetteDate-left: 10.74px;
+    --gazetteOneDate-pd: 3.58px 11.46px;
+    --gazetteTwoDate-pd: 3.58px 11.46px;
+    }
+    /* Additional 768px layout rules scaled for this breakpoint */
+    .slider {
+        margin-top: 57.29px;
+    }
+    .slider-track img {
+        width: 157.55px;
+        margin-right: 14.32px;
+    }
+    .fourth-content {
+        height: 90vh;
+    }
+    .model-burger {
+        width: 70%;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 100%;
+    }
+    .two-buttons {
+        flex-direction: column;
+    }
+    .gazette-imgs {
+        flex-direction: column;
+    }
+    .gazette-one, .gazette-two {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
 @media (max-width: 500px) {
     :root {
         /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 170px;
-    --welcome-fs: 1.8rem;
-    --branches-wd: 300px;
-    --branches-hg: 35px;
-    --branches-fs: 16px;
-    --branches-pd: 0 16px;
-    --branchList-hg: 30px;
-    --researchBtn-fs: 18px;
-    --researchBtn-pd: 9px 18px;
-    --border-rd: 3px;
-    --intro-gap: 18px;
-    --researchBranches-gap: 2px;
+    --topcontent-mgTop: 140px;
+    --welcome-fs: 1.628rem;
+    --branches-wd: 225px;
+    --branches-hg: 24px;
+    --branches-fs: 10.5px;
+    --branches-pd: 0px 10.42px;
+    --branchList-hg: 19.53px;
+    --researchBtn-fs: 10.42px;
+    --researchBtn-pd: 5.21px 11.72px;
+    --border-rd: 3.26px;
+    --intro-gap: 14.97px;
+    --researchBranches-gap: 5.21px;
     
     /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 200px;
-    --modelBurger-br: 8px;
-    --burgerOfTheDay-wd: 320px;
-    --infoContentPara-wd: 320px;
-    --recipe-fs: 14px;
+    --fourthContent-mgTop: 130.21px;
+    --modelBurger-br: 5.21px;
+    --burgerOfTheDay-wd: 234.38px;
+    --infoContentPara-wd: 260.42px;
+    --recipe-fs: 9.11px;
     --recipe-fw: 500;
-    --twoButtons-fs: 16px;
-    --twoButtons-pd: 8px 16px;
-    --twoButtons-gap: 12px;
+    --twoButtons-fs: 11.72px;
+    --twoButtons-pd: 5.21px 19.53px;
+    --twoButtons-gap: 6.51px;
     
         /* Fifth Content CSS Responsive */
     --fifthContent-mgTop: 130px; 
@@ -2328,64 +2512,82 @@ body {
     --learnAboutFranchise-pd: 9px 18px;
     --learnAboutFranchise-mgTop: 28px;
     
-    /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 250px 0 65px;
+        /*Seventh Content CSS Responsive*/
+    --seventhContent-mg: 195.31px 0px 42.32px;
     --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 80vh;
-    --newspaper-br: 3px;
-    --newspaperHeading-fs: 47px;
-    --newspaperHeading-mg: 8px auto;
-    --latestNews-fs: 15px;
-    --latestNews-pd: 6px 15px;
-    --gazetteImgs-gap: 20px;
-    --gazetteDate-fs: 12px;
-    --gazetteDate-top: 10px;
-    --gazetteDate-left: 10px;
-    --gazetteOneDate-pd: 3px 9px;
-    --gazetteTwoDate-pd: 3px 9px;
-    --gazetteImg-wd: 180px;
-    --gazetteImg-br: 4px;
-    --gazetteCaption-wd: 180px;
-    --gazetteCaption-fs: 10.5px;
-    --gazetteCaption-mgTop: 6px;
-    --gazetteNews-gap: 10px;
-    --smallScreenDate-fs: 18px;
-    --gazetteDatePara-gap: 8px;
+    --newspaperWrapper-hg: 120vh;
+    --newspaper-br: 1.95px;
+    --newspaperHeading-fs: 45.57px;
+    --newspaperHeading-mg: 5.21px auto;
+    --latestNews-fs: 11.72px;
+    --latestNews-pd: 5.21px 19.53px;
+    --gazetteImgs-gap: 13.02px;
+    --gazetteImg-wd: 325.52px;
+    --gazetteImg-br: 3.26px;
+    --gazetteCaption-wd: 325.52px;
+    --gazetteCaption-fs: 9.77px;
+    --gazetteCaption-mgTop: 3.91px;
+    --gazetteNews-gap: 3.26px;
+    --gazetteDate-fs: 9.77px;
+    --gazetteDate-top: 13.02px;
+    --gazetteDate-left: 9.77px;
+    --gazetteOneDate-pd: 3.26px 10.42px;
+    --gazetteTwoDate-pd: 3.26px 10.42px;
+    }
+    .slider {
+        margin-top: 52.08px;
     }
     .slider-track img {
-        width: 200px;
+        width: 143.23px;
+        margin-right: 13.02px;
+    }
+    .fourth-content {
+        height: 85vh;
     }
     .model-burger {
-        width: 82%;
+        width: 70%;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 100%;
+    }
+    .two-buttons {
+        flex-direction: column;
+    }
+    .gazette-imgs {
+        flex-direction: column;
+    }
+    .gazette-one, .gazette-two {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 }
 
 @media (max-width: 425px) {
     :root {
         /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 170px;
-    --welcome-fs: 1.5rem;
-    --branches-wd: 300px;
-    --branches-hg: 30px;
-    --branches-fs: 16px;
-    --branches-pd: 0 16px;
-    --branchList-hg: 25px;
-    --researchBtn-fs: 18px;
-    --researchBtn-pd: 6px 18px;
-    --border-rd: 3px;
-    --intro-gap: 16px;
-    --researchBranches-gap: 2px;
+    --topcontent-mgTop: 120px;
+    --welcome-fs: 1.383rem;
+    --branches-wd: 200px;
+    --branches-hg: 22px;
+    --branches-fs: 9.5px;
+    --branches-pd: 0px 8.85px;
+    --branchList-hg: 16.6px;
+    --researchBtn-fs: 8.85px;
+    --researchBtn-pd: 4.43px 9.96px;
+    --border-rd: 2.77px;
+    --intro-gap: 12.73px;
+    --researchBranches-gap: 4.43px;
     
     /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 200px;
-    --modelBurger-br: 8px;
-    --burgerOfTheDay-wd: 280px;
-    --infoContentPara-wd: 280px;
-    --recipe-fs: 12px;
+    --fourthContent-mgTop: 110.68px;
+    --modelBurger-br: 4.43px;
+    --burgerOfTheDay-wd: 199.22px;
+    --infoContentPara-wd: 221.35px;
+    --recipe-fs: 7.75px;
     --recipe-fw: 500;
-    --twoButtons-fs: 14px;
-    --twoButtons-pd: 7px 14px;
-    --twoButtons-gap: 10px;
+    --twoButtons-fs: 9.96px;
+    --twoButtons-pd: 4.43px 16.6px;
+    --twoButtons-gap: 5.53px;
 
     /* Fifth Content CSS Responsive */
     --fifthContent-mgTop: 120px; 
@@ -2418,71 +2620,81 @@ body {
     --learnAboutFranchise-mgTop: 28px;
     
     /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 250px 0 65px;
+    --seventhContent-mg: 166.02px 0px 35.97px;
     --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 75vh;
-    --newspaper-br: 3px;
-    --newspaperHeading-fs: 42px;
-    --newspaperHeading-mg: 8px auto;
-    --latestNews-fs: 15px;
-    --latestNews-pd: 6px 15px;
-    --gazetteImgs-gap: 20px;
-    --gazetteDate-fs: 12px;
-    --gazetteDate-top: 10px;
-    --gazetteDate-left: 10px;
-    --gazetteOneDate-pd: 3px 9px;
-    --gazetteTwoDate-pd: 3px 9px;
-    --gazetteImg-wd: 160px;
-    --gazetteImg-br: 4px;
-    --gazetteCaption-wd: 160px;
-    --gazetteCaption-fs: 9px;
-    --gazetteCaption-mgTop: 6px;
-    --gazetteNews-gap: 8px;
-    --smallScreenDate-fs: 16px;
-    --gazetteDatePara-gap: 5px;
+    --newspaperWrapper-hg: 105vh;
+    --newspaper-br: 1.66px;
+    --newspaperHeading-fs: 38.74px;
+    --newspaperHeading-mg: 4.43px auto;
+    --latestNews-fs: 9.96px;
+    --latestNews-pd: 4.43px 16.6px;
+    --gazetteImgs-gap: 11.07px;
+    --gazetteImg-wd: 276.69px;
+    --gazetteImg-br: 2.77px;
+    --gazetteCaption-wd: 276.69px;
+    --gazetteCaption-fs: 8.3px;
+    --gazetteCaption-mgTop: 3.32px;
+    --gazetteNews-gap: 2.77px;
+    --gazetteDate-fs: 8.3px;
+    --gazetteDate-top: 11.07px;
+    --gazetteDate-left: 8.3px;
+    --gazetteOneDate-pd: 2.77px 8.85px;
+    --gazetteTwoDate-pd: 2.77px 8.85px;
     }
     .slider {
-        margin-top: 60px;
+        margin-top: 44.27px;
     }
     .slider-track img {
-        width: 200px;
+        width: 121.74px;
+        margin-right: 11.07px;
     }
     .fourth-content {
-        height: 100vh;
+        height: 80vh;
     }
     .model-burger {
-        width: 82%;
-        grid-template-rows: 42% 58%;
+        width: 70%;
+        grid-template-rows: 50% 50%;
         grid-template-columns: 100%;
+    }
+    .two-buttons {
+        flex-direction: column;
+    }
+    .gazette-imgs {
+        flex-direction: column;
+    }
+    .gazette-one, .gazette-two {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 }
 
 @media (max-width: 375px) {
     :root {
         /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 170px;
-    --welcome-fs: 1.3rem;
-    --branches-wd: 300px;
-    --branches-hg: 30px;
-    --branches-fs: 16px;
-    --branches-pd: 0 16px;
-    --branchList-hg: 25px;
-    --researchBtn-fs: 18px;
-    --researchBtn-pd: 6px 18px;
-    --border-rd: 3px;
-    --intro-gap: 14px;
-    --researchBranches-gap: 2px;
+    --topcontent-mgTop: 120px;
+    --welcome-fs: 1.221rem;
+    --branches-wd: 180px;
+    --branches-hg: 20px;
+    --branches-fs: 8px;
+    --branches-pd: 0px 7.81px;
+    --branchList-hg: 14.65px;
+    --researchBtn-fs: 7.81px;
+    --researchBtn-pd: 3.91px 8.79px;
+    --border-rd: 2.44px;
+    --intro-gap: 11.23px;
+    --researchBranches-gap: 3.91px;
 
     /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 200px;
-    --modelBurger-br: 8px;
-    --burgerOfTheDay-wd: 240px;
-    --infoContentPara-wd: 250px;
-    --recipe-fs: 11px;
+    --fourthContent-mgTop: 97.66px;
+    --modelBurger-br: 3.91px;
+    --burgerOfTheDay-wd: 180px;
+    --infoContentPara-wd: 190px;
+    --recipe-fs: 7px;
     --recipe-fw: 500;
-    --twoButtons-fs: 13px;
-    --twoButtons-pd: 6px 12px;
-    --twoButtons-gap: 8px;
+    --twoButtons-fs: 9px;
+    --twoButtons-pd: 4px 18px;
+    --twoButtons-gap: 4.88px;
 
     /* Fifth Content CSS Responsive */
     --fifthContent-mgTop: 110px; 
@@ -2515,41 +2727,128 @@ body {
     --learnAboutFranchise-mgTop: 28px;
     
     /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 220px 0 65px;
+    --seventhContent-mg: 146.48px 0px 31.74px;
     --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 75vh;
-    --newspaper-br: 3px;
-    --newspaperHeading-fs: 38px;
-    --newspaperHeading-mg: 8px auto;
-    --latestNews-fs: 14px;
-    --latestNews-pd: 6px 15px;
-    --gazetteImgs-gap: 20px;
-    --gazetteDate-fs: 12px;
-    --gazetteDate-top: 10px;
-    --gazetteDate-left: 10px;
-    --gazetteOneDate-pd: 3px 9px;
-    --gazetteTwoDate-pd: 3px 9px;
-    --gazetteImg-wd: 138px;
-    --gazetteImg-br: 3px;
-    --gazetteCaption-wd: 130px;
-    --gazetteCaption-fs: 8px;
-    --gazetteCaption-mgTop: 6px;
-    --gazetteNews-gap: 5px;
-    --smallScreenDate-fs: 15px;
-    --gazetteDatePara-gap: 5px;
+    --newspaperWrapper-hg: 92vh;
+    --newspaper-br: 1.46px;
+    --newspaperHeading-fs: 34.18px;
+    --newspaperHeading-mg: 3.91px auto;
+    --latestNews-fs: 8.79px;
+    --latestNews-pd: 3.91px 14.65px;
+    --gazetteImgs-gap: 9.77px;
+    --gazetteImg-wd: 244.14px;
+    --gazetteImg-br: 2.44px;
+    --gazetteCaption-wd: 244.14px;
+    --gazetteCaption-fs: 7.32px;
+    --gazetteCaption-mgTop: 2.93px;
+    --gazetteNews-gap: 2.44px;
+    --gazetteDate-fs: 7.32px;
+    --gazetteDate-top: 9.77px;
+    --gazetteDate-left: 7.32px;
+    --gazetteOneDate-pd: 2.44px 7.81px;
+    --gazetteTwoDate-pd: 2.44px 7.81px;
     }
     .slider {
-        margin-top: 50px;
+        margin-top: 39.06px;
     }
     .slider-track img {
-        width: 180px;
+        width: 107.42px;
+        margin-right: 9.77px;
     }
     .fourth-content {
-        height: 100vh;
+        height: 70vh;
     }
     .model-burger {
-        width: 82%;
-        grid-template-rows: 42% 58%;
+        width: 70%;
+        grid-template-rows: 50% 50%;
         grid-template-columns: 100%;
+    }
+    .two-buttons {
+        flex-direction: column;
+    }
+    .gazette-imgs {
+        flex-direction: column;
+    }
+    .gazette-one, .gazette-two {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+@media (max-width: 320px) {
+    :root {
+        /*Top Content CSS Responsive*/
+    --topcontent-mgTop: 75px;
+    --welcome-fs: 1.042rem;
+    --branches-wd: 125px;
+    --branches-hg: 12.5px;
+    --branches-fs: 5.83px;
+    --branches-pd: 0px 6.67px;
+    --branchList-hg: 12.5px;
+    --researchBtn-fs: 6.67px;
+    --researchBtn-pd: 3.33px 7.5px;
+    --border-rd: 2.08px;
+    --intro-gap: 9.58px;
+    --researchBranches-gap: 3.33px;
+
+        /*Fourth Content CSS Responsive*/
+    --fourthContent-mgTop: 83.33px;
+    --modelBurger-br: 3.33px;
+    --burgerOfTheDay-wd: 150px;
+    --infoContentPara-wd: 166.67px;
+    --recipe-fs: 5.83px;
+    --recipe-fw: 500;
+    --twoButtons-fs: 7.5px;
+    --twoButtons-pd: 3.33px 12.5px;
+    --twoButtons-gap: 4.17px;
+
+        /*Seventh Content CSS Responsive*/
+    --seventhContent-mg: 125px 0px 27.08px;
+    --newspaperWrapper-wd: 90%;
+    --newspaperWrapper-hg: 80vh;
+    --newspaper-br: 1.25px;
+    --newspaperHeading-fs: 29.17px;
+    --newspaperHeading-mg: 3.33px auto;
+    --latestNews-fs: 7.5px;
+    --latestNews-pd: 3.33px 12.5px;
+    --gazetteImgs-gap: 8.33px;
+    --gazetteImg-wd: 208.33px;
+    --gazetteImg-br: 2.08px;
+    --gazetteCaption-wd: 208.33px;
+    --gazetteCaption-fs: 6.25px;
+    --gazetteCaption-mgTop: 2.5px;
+    --gazetteNews-gap: 2.08px;
+    --gazetteDate-fs: 6.25px;
+    --gazetteDate-top: 8.33px;
+    --gazetteDate-left: 6.25px;
+    --gazetteOneDate-pd: 2.08px 6.67px;
+    --gazetteTwoDate-pd: 2.08px 6.67px;
+    }
+    /* Additional 768px layout rules scaled for this breakpoint */
+    .slider {
+        margin-top: 33.33px;
+    }
+    .slider-track img {
+        width: 91.67px;
+        margin-right: 8.33px;
+    }
+    .fourth-content {
+        height: 120vh;
+    }
+    .model-burger {
+        width: 70%;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 100%;
+    }
+    .two-buttons {
+        flex-direction: column;
+    }
+    .gazette-imgs {
+        flex-direction: column;
+    }
+    .gazette-one, .gazette-two {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 }
