@@ -251,7 +251,6 @@
     .list ul li {
         font-size: var(--welcome-fs);
         color: #016016;
-        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.306);
     }
 }
 @media (max-width: 600px) {
