@@ -2460,13 +2460,13 @@ body {
         /*Top Content CSS Responsive*/
     --topcontent-mgTop: 140px;
     --welcome-fs: 1.628rem;
-    --branches-wd: 225px;
-    --branches-hg: 24px;
-    --branches-fs: 10.5px;
+    --branches-wd: 280px;
+    --branches-hg: 38px;
+    --branches-fs: 14px;
     --branches-pd: 0px 10.42px;
     --branchList-hg: 19.53px;
-    --researchBtn-fs: 10.42px;
-    --researchBtn-pd: 5.21px 11.72px;
+    --researchBtn-fs: 18px;
+    --researchBtn-pd: 6px 12px;
     --border-rd: 3.26px;
     --intro-gap: 14.97px;
     --researchBranches-gap: 5.21px;
@@ -2567,13 +2567,13 @@ body {
         /*Top Content CSS Responsive*/
     --topcontent-mgTop: 120px;
     --welcome-fs: 1.383rem;
-    --branches-wd: 200px;
-    --branches-hg: 22px;
-    --branches-fs: 9.5px;
-    --branches-pd: 0px 8.85px;
+    --branches-wd: 260px;
+    --branches-hg: 34px;
+    --branches-fs: 12px;
+    --branches-pd: 0px 10px;
     --branchList-hg: 16.6px;
-    --researchBtn-fs: 8.85px;
-    --researchBtn-pd: 4.43px 9.96px;
+    --researchBtn-fs: 15px;
+    --researchBtn-pd: 6px 12px;
     --border-rd: 2.77px;
     --intro-gap: 12.73px;
     --researchBranches-gap: 4.43px;
@@ -2674,13 +2674,13 @@ body {
         /*Top Content CSS Responsive*/
     --topcontent-mgTop: 120px;
     --welcome-fs: 1.221rem;
-    --branches-wd: 180px;
-    --branches-hg: 20px;
-    --branches-fs: 8px;
-    --branches-pd: 0px 7.81px;
+    --branches-wd: 230px;
+    --branches-hg: 30px;
+    --branches-fs: 11px;
+    --branches-pd: 0px 9px;
     --branchList-hg: 14.65px;
-    --researchBtn-fs: 7.81px;
-    --researchBtn-pd: 3.91px 8.79px;
+    --researchBtn-fs: 13px;
+    --researchBtn-pd: 6px 10px;
     --border-rd: 2.44px;
     --intro-gap: 11.23px;
     --researchBranches-gap: 3.91px;
@@ -2778,15 +2778,15 @@ body {
 @media (max-width: 320px) {
     :root {
         /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 75px;
+    --topcontent-mgTop: 120px;
     --welcome-fs: 1.042rem;
-    --branches-wd: 125px;
-    --branches-hg: 12.5px;
-    --branches-fs: 5.83px;
-    --branches-pd: 0px 6.67px;
+    --branches-wd: 210px;
+    --branches-hg: 25px;
+    --branches-fs: 10px;
+    --branches-pd: 0px 9px;
     --branchList-hg: 12.5px;
-    --researchBtn-fs: 6.67px;
-    --researchBtn-pd: 3.33px 7.5px;
+    --researchBtn-fs: 12px;
+    --researchBtn-pd: 5.5px 9px;
     --border-rd: 2.08px;
     --intro-gap: 9.58px;
     --researchBranches-gap: 3.33px;
@@ -2833,7 +2833,7 @@ body {
         margin-right: 8.33px;
     }
     .fourth-content {
-        height: 120vh;
+        height: 65vh;
     }
     .model-burger {
         width: 70%;
