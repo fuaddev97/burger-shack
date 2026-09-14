@@ -1,4 +1,5 @@
 import './Footer.css'
+import BackToTop from './BackToTop'
 import BSBricks from './assets/bs-bricks.jpg'
 
 function Footer() {
@@ -55,7 +56,7 @@ function Footer() {
             <img src={BSBricks} alt="burger-shack-bricks" className="burger-shack-bricks"/>
             <div className="est-date">
                 <p className="date">Burger Shack © 2026</p>
-                <button className="back-to-top"><span><i className="fa-solid fa-arrow-up"></i></span>Back to top</button>
+              <BackToTop />
             </div>
         </div>
         </footer>

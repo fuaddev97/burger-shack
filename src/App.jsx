@@ -44,6 +44,16 @@ function App() {
   const images = [LeftTopImg, RightTopImg, TwoBurgers, WithFries, WholeMeal];
 
   useEffect(() => {
+    document.documentElement.classList.toggle("no-scroll-bar", sidebarOpen);
+    document.body.classList.toggle("no-scroll-bar", sidebarOpen);
+
+    return () => {
+      document.documentElement.classList.remove("no-scroll-bar");
+      document.body.classList.remove("no-scroll-bar");
+    };
+  }, [sidebarOpen]);
+
+  useEffect(() => {
     setTimeout ( () => {
       setBranchesVisible(true);
     }, 200);

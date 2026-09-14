@@ -9,6 +9,10 @@
 body {
     overflow-x: hidden;
 }
+html.no-scroll-bar,
+body.no-scroll-bar {
+    overflow: hidden;
+}
 .top-content {
     display: flex;
     align-items: flex-start;
