@@ -1418,7 +1418,7 @@ div.two-burgers > *:first-child {
     --artCollectionTwo-top: 30vh; 
     --artCollectionTwo-left: 81vw;
     --contactUs-wd: 50%; 
-    --contactUs-fs: clamp(0.8rem, 1.06vw, 1.5rem);
+    --contactUs-fs: clamp(1.2rem, 1.6vw, 2.5rem);
     --learnAboutFranchise-fs: clamp(1rem, 1.3vw, 2rem);
     --learnAboutFranchise-pd: 0.6em 1.6em; 
     
