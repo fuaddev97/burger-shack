@@ -70,8 +70,9 @@
 }
 .list ul li {
     list-style: none;
-    font-family: "Inter", "Work Sans", system-ui, sans-serif;
-    font-weight: 900;
+    font-family:  Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+    letter-spacing: -1.2px;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: -0.03em;
     font-size: var(--list-fs);
@@ -137,7 +138,7 @@
         padding: 0 8%;
     }
     .list ul li {
-        letter-spacing: 0.05px;
+        letter-spacing: 0.5px;
     }
     .image-container {
         display: none;
@@ -183,13 +184,15 @@
         max-width: 19.5rem;
     }
     .list ul li {
+        font-family: "Inter", "Work Sans", system-ui, sans-serif;
+        font-weight: 900;
         color: #faa8b4;
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.45);
     }
 }
 @media (min-width: 1200px) {
     :root {
-        --list-fs: clamp(2rem, 2.6vw, 6rem);
+        --list-fs: clamp(2.5rem, 3.3vw, 6.5rem);
         --list-gap: 2vh;
         --insideList-gap: 1vw;
         --logoContainer-wnh: 2vw;
