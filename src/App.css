@@ -1325,13 +1325,13 @@ div.two-burgers > *:first-child {
     :root {
         /*Top Content CSS Responsive*/
     --topcontent-mgTop: 35vh;
-    --welcome-fs: clamp(2rem, 3vw, 6rem);
-    --branches-wd: 21em;
+    --welcome-fs: clamp(2rem, 2.6vw, 4.5rem);
+    --branches-wd: 25em;
     --branches-hg: 2.5em;
-    --branches-fs: clamp(0.8rem, 1.15vw, 4.3rem);
+    --branches-fs: clamp(0.8rem, 1.06vw, 2rem);
     --branches-pd: 0 1em;
-    --branchList-hg: 1.9em;
-    --researchBtn-fs: clamp(0.8rem, 1.25vw, 4.4rem);
+    --branchList-hg: 2em;
+    --researchBtn-fs: clamp(0.8rem, 1.06vw, 2rem);
     --researchBtn-pd: 0.6em 1.1em;
     --border-rd: 0.25em;
     --intro-gap: 2.5em;
@@ -1384,21 +1384,21 @@ div.two-burgers > *:first-child {
     --modelBurger-br: 0.5em;
     --burgerOfTheDay-wd: 70%;
     --infoContentPara-wd: 80%;
-    --recipe-fs: clamp(0.8rem, 1.32vw, 4rem);
+    --recipe-fs: clamp(0.8rem, 1.06vw, 2rem);
     --recipe-fw: 500;
-    --twoButtons-fs: clamp(1rem, 1.45vw, 4rem);
+    --twoButtons-fs: clamp(1rem, 1.3vw, 2rem);
     --twoButtons-pd: 0.5em 1.25em;
     --twoButtons-gap: 1em;
     
     /* Fifth Content CSS Responsive */
     --fifthContent-mgTop: 30vh;
-    --storyTitle-fs: clamp(6.25rem, 10vw, 20rem); 
+    --storyTitle-fs: clamp(6.25rem, 8.3vw, 15rem); 
     --makeYourOrder-wd: 70%; 
     --makeYourOrder-mgTop: -6vh;
     --storyContent-wd: 65%;
-    --storyContent-fs: clamp(1rem, 1.2vw, 4rem);
+    --storyContent-fs: clamp(1rem, 1.3vw, 2rem);
     --storyContent-mgTop: 4vh;
-    --learnMore-fs: clamp(1rem, 1.35vw, 4.5rem);
+    --learnMore-fs: clamp(1rem, 1.3vw, 2rem);
     --learnMore-pd: 0.6em 1.6em;
     --learnMore-mgTop: 4vh; 
     
@@ -1410,7 +1410,7 @@ div.two-burgers > *:first-child {
     --franchise-wd: 17%; 
     --franchise-top: -6vh;
     --followDreams-wd: 60%; 
-    --followDreams-fs: clamp(2.3rem, 3.4vw, 8rem);
+    --followDreams-fs: clamp(2.3rem, 3.06vw, 5rem);
     --artCollectionOne-wd: 18%; 
     --artCollectionOne-top: -12vh; 
     --artCollectionOne-left: 1vw;
@@ -1418,8 +1418,8 @@ div.two-burgers > *:first-child {
     --artCollectionTwo-top: 30vh; 
     --artCollectionTwo-left: 81vw;
     --contactUs-wd: 50%; 
-    --contactUs-fs: clamp(0.8rem, 1.6vw, 5rem);
-    --learnAboutFranchise-fs: clamp(1rem, 1.35vw, 4.5rem); 
+    --contactUs-fs: clamp(0.8rem, 1.06vw, 1.5rem);
+    --learnAboutFranchise-fs: clamp(1rem, 1.3vw, 2rem);
     --learnAboutFranchise-pd: 0.6em 1.6em; 
     
     /* Seventh Content CSS Responsive */
@@ -1428,11 +1428,11 @@ div.two-burgers > *:first-child {
     --newspaperWrapper-hg: 105vh; 
     --newspaper-br: 0.35em;
     --newspaper-pd: 8vh 0;
-    --newspaperHeading-fs: clamp(5rem, 7vw, 14rem); 
-    --latestNews-fs: clamp(1rem, 1.4vw, 5rem); 
+    --newspaperHeading-fs: clamp(5rem, 6.6vw, 10rem); 
+    --latestNews-fs: clamp(1rem, 1.3vw, 2rem);
     --latestNews-pd: 0.5em 1.4em; 
     --gazetteImgs-gap: 2vw;
-    --gazetteDate-fs: clamp(0.8rem, 1.3vw, 3rem); 
+    --gazetteDate-fs: clamp(0.8rem, 1.06vw, 2rem);
     --gazetteDate-top: 1.10em; 
     --gazetteDate-left: 1.10em;
     --gazetteOneDate-pd: 0.4em 1em;
@@ -1440,7 +1440,7 @@ div.two-burgers > *:first-child {
     --gazetteImg-wd: 48%;
     --gazetteImg-br: 0.5em;
     --gazetteCaption-wd: 100%; 
-    --gazetteCaption-fs: clamp(0.8rem, 1.25vw, 4rem);
+    --gazetteCaption-fs: clamp(0.8rem, 1.06vw, 2rem);
     }
     .newspaper-wrapper {
         max-height: none;
