@@ -123,11 +123,11 @@ body {
     transform: translateY(0px);
 }
 .welcome {
-    font-family: "Inter", "Work Sans", system-ui, sans-serif;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+    letter-spacing: -1.2px;
     width: var(--welcome-wd);
-    font-weight: 900;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: -0.03em;
     font-size: var(--welcome-fs);
     text-align: center;
     color: #00340B;
@@ -1151,7 +1151,7 @@ div.two-burgers > *:first-child {
         /*Top Content CSS Responsive*/
     --topcontent-mgTop: 35vh;
     --welcome-wd: 100%;
-    --welcome-fs: clamp(1.2rem, 2.6vw, 2rem);
+    --welcome-fs: clamp(1.8rem, 3.6vw, 2.7rem);
     --branches-wd: 20em;
     --branches-hg: 2.2em;
     --branches-fs: clamp(0.8rem, 1.4vw, 2rem);
@@ -1270,6 +1270,11 @@ div.two-burgers > *:first-child {
     }
     .left-img, .right-img, .second-content, .third-content {
         display: flex;
+    }
+    .welcome {
+        font-family: "Inter", "Work Sans", system-ui, sans-serif;
+        letter-spacing: 0;
+        font-weight: 900;
     }
     .pink-background {
         max-height: none;
