@@ -1,11 +1,11 @@
 import './Footer.css'
-import BSBricks from './assets/bs-bricks.png'
+import BSBricks from './assets/bs-bricks.jpg'
 
 function Footer() {
     return(
-        <>
+        <footer>
         <div className="light-green">
-            <div className="about-the-resturant">
+            <nav className="about-the-resturant">
                 
                     <a href="#" className="welcome-link">Welcome</a>
                     <a href="#" className="story-link">The story of Burger Shack</a>
@@ -19,28 +19,28 @@ function Footer() {
                     <a href="#" className="recruitment">Recruitment</a>
                     <a href="#" className="credits">Credits</a>
 
-            </div>
+            </nav>
             <div className="social-media">
                 <p className="follow-us">Follow us on social media</p>
-                <div class="icons">
-                <div class="face">
-                 <a href="#" class="facebook">
-                  <i class="fa-brands fa-facebook-f"></i>
+                <div className="icons">
+                <div className="face">
+                 <a href="#" className="facebook">
+                  <i className="fa-brands fa-facebook-f"></i>
                 </a>
                 </div>
-                <div class="insta">
-                <a href="#" class="instagram">
-                  <i class="fa-brands fa-instagram"></i>
+                <div className="insta">
+                <a href="#" className="instagram">
+                  <i className="fa-brands fa-instagram"></i>
                 </a>
                 </div>
-                <div class="tik">
-                <a href="#" class="tiktok">
-                  <i class="fa-brands fa-tiktok"></i>
+                <div className="tik">
+                <a href="#" className="tiktok">
+                  <i className="fa-brands fa-tiktok"></i>
                 </a>
                 </div>
-                <div class="linked">
-                <a href="#" class="linkedin">
-                  <i class="fa-brands fa-linkedin-in"></i>
+                <div className="linked">
+                <a href="#" className="linkedin">
+                  <i className="fa-brands fa-linkedin-in"></i>
                 </a>
                 </div>
                 </div>
@@ -55,11 +55,10 @@ function Footer() {
             <img src={BSBricks} alt="burger-shack-bricks" className="burger-shack-bricks"/>
             <div className="est-date">
                 <p className="date">Burger Shack © 2026</p>
-                <button className="back-to-top"><span><i class="fa-solid fa-arrow-up"></i></span>Back to top</button>
+                <button className="back-to-top"><span><i className="fa-solid fa-arrow-up"></i></span>Back to top</button>
             </div>
-            <img src={BSBricks} alt="burger-shack-bricks" className="burger-shack-bricks-responsive"/>
         </div>
-        </>
+        </footer>
     );
 }
 

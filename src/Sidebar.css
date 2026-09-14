@@ -1,9 +1,9 @@
 .sidebar-container {
-    height: 100vh;
-    padding-top: var(--header-height);
+    width: 100%;
+    height: calc(100vh - var(--header-height));
     background-color: #FDF9F0;
     position: fixed;
-    top: 0;
+    bottom: 0;
     z-index: 10;
     width: 0;
     display: none;
@@ -74,7 +74,7 @@
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.03em;
-    font-size: var(--welcome-fs);
+    font-size: var(--list-fs);
     color: #FFB6C1;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.45);
     display: flex;
@@ -85,11 +85,17 @@
     width: var(--logoContainer-wnh);
     height: var(--logoContainer-wnh);
     border-radius: 50%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.402);
+    opacity: 0;
+    transition: opacity 0.2 ease;
+}
+.logo-container-visible {
+    display: flex;
+    opacity: 1;
 }
 .logo-container img {
     width: 100%;
@@ -118,178 +124,99 @@
     border-radius: var(--imageContainer-br);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-@media (max-width: 2900px) {
-    :root {
-        --list-gap: 15px;
-        --insideList-gap: 25px;
-        --logoContainer-wnh: 52px;
-        --listHover-pdLeft: 45px;
-        --imageContainer-w: 525px;
-        --imageContainer-h: 700px;
-        --imageContainer-br: 12px;
-    }
 
-}
-@media (max-width: 2560px) {
+@media (min-width: 250px) {
     :root {
-        --list-gap: 13.39px;
-        --insideList-gap: 22.32px;
-        --logoContainer-wnh: 46.43px;
-        --listHover-pdLeft: 40.18px;
-        --imageContainer-w: 468.75px;
-        --imageContainer-h: 625px;
-        --imageContainer-br: 10.71px;
+        --list-fs: clamp(1.6rem, 10.24vw, 2.4rem);
+        --list-gap: 2.2vh;
+        --insideList-gap: 1vw;
+        --logoContainer-wnh: 0;
+        --listHover-pdLeft: 1vw;
     }
-}
-@media (max-width: 2200px) {
-    :root {
-        --list-gap: 11.79px;
-        --insideList-gap: 19.64px;
-        --logoContainer-wnh: 40.86px;
-        --listHover-pdLeft: 35.36px;
-        --imageContainer-w: 412.5px;
-        --imageContainer-h: 550px;
-        --imageContainer-br: 9.43px;
-    }
-}
-@media (max-width: 2000px) {
-    :root {
-        --list-gap: 10.71px;
-        --insideList-gap: 17.86px;
-        --logoContainer-wnh: 37.14px;
-        --listHover-pdLeft: 32.14px;
-        --imageContainer-w: 375px;
-        --imageContainer-h: 500px;
-        --imageContainer-br: 8.57px;
-    }
-}
-@media (max-width: 1800px) {
-    :root {
-        --list-gap: 9.64px;
-        --insideList-gap: 16.07px;
-        --logoContainer-wnh: 33.43px;
-        --listHover-pdLeft: 28.93px;
-        --imageContainer-w: 337.5px;
-        --imageContainer-h: 450px;
-        --imageContainer-br: 7.71px;
-    }
-}
-@media (max-width: 1600px) {
-    :root {
-        --list-gap: 8.57px;
-        --insideList-gap: 14.29px;
-        --logoContainer-wnh: 29.71px;
-        --listHover-pdLeft: 25.71px;
-        --imageContainer-w: 300px;
-        --imageContainer-h: 400px;
-        --imageContainer-br: 6.86px;
-    }
-}
-@media (max-width: 1440px) {
-    :root {
-        --list-gap: 7.71px;
-        --insideList-gap: 12.86px;
-        --logoContainer-wnh: 26.74px;
-        --listHover-pdLeft: 23.14px;
-        --imageContainer-w: 270px;
-        --imageContainer-h: 360px;
-        --imageContainer-br: 6.17px;
-    }
-}
-@media (max-width: 1200px) {
-    :root {
-        --list-gap: 6.43px;
-        --insideList-gap: 10.71px;
-        --logoContainer-wnh: 22.29px;
-        --listHover-pdLeft: 19.29px;
-        --imageContainer-w: 225px;
-        --imageContainer-h: 300px;
-        --imageContainer-br: 5.14px;
-    }
-}
-@media (max-width: 1024px) {
-    :root {
-        --list-gap: 6.43px;
-        --insideList-gap: 10.71px;
-        --logoContainer-wnh: 22.29px;
-        --listHover-pdLeft: 19.29px;
-        --imageContainer-w: 225px;
-        --imageContainer-h: 300px;
-        --imageContainer-br: 5.14px;
-    }
-}
-@media (max-width: 768px) {
-    :root {
-        --list-gap: 6.43px;
-        --insideList-gap: 10.71px;
-        --logoContainer-wnh: 22.29px;
-        --listHover-pdLeft: 19.29px;
+    .list-and-image {
+        padding: 0 8%;
     }
     .list ul li {
-        font-size: calc(var(--welcome-fs) - 5px);
+        letter-spacing: 0.05px;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.42);
     }
-    .images {
+    .image-container {
         display: none;
     }
 }
-@media (max-width: 700px) {
+@media (min-width: 375px) {
     :root {
-        --list-gap: 10px;
-        --insideList-gap: 15px;
-        --logoContainer-wnh: 21px;
-        --listHover-pdLeft: 0px;
+        --list-fs: clamp(2rem, 8.53vw, 2.2rem);
+        --list-gap: 1.25vh;
+        --insideList-gap: 1vw;
+        --logoContainer-wnh: 0;
+        --listHover-pdLeft: 1.2vw;
     }
-    .logo-container {
-    width: 0;
-    height: 0;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.402);
-    }
-    .logo-container-visible {
-    width: var(--logoContainer-wnh);
-    height: var(--logoContainer-wnh);
+    .list-and-image {
+        padding: 0 8%;
     }
     .list ul li {
-        font-size: var(--welcome-fs);
-        color: #016016;
+        letter-spacing: 0.05px;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.42);
+    }
+    .image-container {
+        display: none;
     }
 }
-@media (max-width: 600px) {
+@media (min-width: 500px) {
     :root {
-        --list-gap: 10px;
-        --insideList-gap: 15px;
-        --logoContainer-wnh: 21px;
-        --listHover-pdLeft: 0px;
+        --list-fs: clamp(2.1rem, 6.72vw, 2.5rem);
+        --list-gap: 1.25vh;
+        --insideList-gap: 1vw;
+        --logoContainer-wnh: 0;
+        --listHover-pdLeft: 1.5vw;
+    }
+    .list-and-image {
+        padding: 0 10%;
+    }
+    .list ul li {
+        letter-spacing: 0.05px;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.42);
+    }
+    .image-container {
+        display: none;
     }
 }
-@media (max-width: 500px) {
+@media (min-width: 800px) {
     :root {
-        --list-gap: 15px;
-        --insideList-gap: 15px;
-        --logoContainer-wnh: 21px;
-        --listHover-pdLeft: 0px;
+        --list-fs: clamp(2rem, 4vw, 2.6rem);
+        --list-gap: 1.25vh;
+        --insideList-gap: 1vw;
+        --logoContainer-wnh: 3vw;
+        --listHover-pdLeft: 1.5vw;
+        --imageContainer-w: 35vw;
+        --imageContainer-h: 62vh;
+        --imageContainer-br: 0.32em;
+    }
+    .list-and-image {
+    padding: 0 8%;
+    
+    }
+    .image-container {
+        max-width: 19.5rem;
     }
 }
-@media (max-width: 425px) {
+@media (min-width: 1200px) {
     :root {
-        --list-gap: 15px;
-        --insideList-gap: 15px;
-        --logoContainer-wnh: 21px;
-        --listHover-pdLeft: 0px;
+        --list-fs: clamp(2rem, 2.6vw, 6rem);
+        --list-gap: 2vh;
+        --insideList-gap: 1vw;
+        --logoContainer-wnh: 2vw;
+        --listHover-pdLeft: 2vw;
+        --imageContainer-w: 18.75vw;
+        --imageContainer-h: 52vh;
+        --imageContainer-br: 0.32em;
     }
-}
-@media (max-width: 375px) {
-    :root {
-        --list-gap: 15px;
-        --insideList-gap: 15px;
-        --logoContainer-wnh: 21px;
-        --listHover-pdLeft: 0px;
+    .list-and-image {
+        padding: 0 10%;
     }
-}
-@media (max-width: 320px) {
-    :root {
-        --list-gap: 15px;
-        --insideList-gap: 15px;
-        --logoContainer-wnh: 21px;
-        --listHover-pdLeft: 0px;
+    .image-container {
+        display: block;
+        max-width: none;
     }
 }

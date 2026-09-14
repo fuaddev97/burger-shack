@@ -4,16 +4,47 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #FDF9F0;
+  background-color: #FFF9F4;
 }
 body {
     overflow-x: hidden;
 }
 .top-content {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: center;
     margin-top: var(--topcontent-mgTop);
+}
+
+.slider {
+   width: 100%;
+   margin-top:60px;
+   overflow: hidden;
+   display: block;  
+}
+.slider-track {
+     display: flex;
+     width: max-content;
+    animation: infinite-scroll 20s linear infinite;
+}
+
+.slider-track img {
+    width: 75vw;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+@keyframes infinite-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+.left-img, .right-img, .second-content, .third-content {
+    display: none;
 }
 .left-img {
     width: var(--leftImg-wd);
@@ -50,7 +81,6 @@ body {
     width: var(--rightImg-wd);
     position:  relative;
     top: var(--rightImg-top);
-    display: flex;
     align-items: center;
     transform: rotate(5deg);
     box-shadow: -12px 18px 15px rgba(0, 0, 0, 0.1);
@@ -80,6 +110,7 @@ body {
     bottom: var(--rightImgAft-btm);
 }
 .intro {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: var(--intro-gap);
@@ -93,7 +124,7 @@ body {
 }
 .welcome {
     font-family: "Inter", "Work Sans", system-ui, sans-serif;
-    width: 100%;
+    width: var(--welcome-wd);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.03em;
@@ -101,6 +132,7 @@ body {
     text-align: center;
     color: #00340B;
     clip-path: inset(100% 0 -15px 0);
+    line-height: 1.05;
 }
 .welcome-visible {
     animation: storyTitleReveal 0.5s ease-out forwards;
@@ -110,7 +142,6 @@ body {
     0% {
         clip-path: inset(100% 0 -15px 0);
     }
-
     100% {
         clip-path: inset(0 0 -15px 0);
     }
@@ -181,7 +212,7 @@ body {
 }
 .research-btn {
     font-size: var(--researchBtn-fs);
-    color: #FDF9F0;
+    color: #FFF9F4;
     background-color: #00340B;
     border: 1px solid #00340B;
     border-radius: var(--border-rd);
@@ -199,16 +230,12 @@ body {
 .second-content {
     width: var(--secondContent-wd);
     margin: 0 auto;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-left: var(--secondContent-pdLeft);
+    align-items: flex-start;
     margin-top: var(--secondContent-mgTop);
 }
 .creative-logo {
     width: var(--creativeLogo-wd);
-    margin-top: -200px;
-    margin-right: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.329);
     opacity: 0;
     transition: all 0.5s ease;
@@ -229,7 +256,7 @@ body {
 .two-burgers-visible {
     opacity: 1;
 }
-.two-burgers img {
+div.two-burgers > *:first-child {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -263,7 +290,6 @@ body {
 }
 .two-burgers .the-line {
     width: var(--theLine-wd);
-    height: auto;
     position: absolute;
     top: var(--theLine-top);
     left: var(--theLine-left);
@@ -271,18 +297,14 @@ body {
 }
 .third-content {
     width: var(--thirdContent-wd);
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-top: var(--thirdContent-mgTop);
 }
 .with-fries {
     width: var(--withFries-wd);
     transform: rotate(0deg);
     box-shadow: -12px 18px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
-    bottom: var(--withFries-btm);
     opacity: 0;
     transition: all 0.5s ease;
 }
@@ -297,10 +319,9 @@ body {
 }
 .whole-meal {
     width: var(--wholeMeal-wd);
-    box-shadow: -12px 18px 15px rgba(0, 0, 0, 0.32);
+    box-shadow: -12px 18px 15px #00000052;
     transform: rotate(1deg);
-    position: relative;
-    bottom: var(--wholeMeal-btm);
+    margin-top:  var(--wholeMeal-top);
     opacity: 0;
     transition: all 0.5s ease;
 }
@@ -322,21 +343,21 @@ body {
 }
 .fourth-content {
     width: 100%;
-    height: 60vh;
+    height: var(--fourthContent-hg);
     margin-top: var(--fourthContent-mgTop);
 }
 .model-burger {
-    width: 85%;
+    width: var(--modelBurger-wd);
     height: 100%;
     border: 1px solid #00340b;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 45% 55%;
-    grid-template-rows: 100%;
+    grid-template-rows: 40% 60%;
+    grid-template-columns: 100%;
     border-radius: var(--modelBurger-br);
     overflow: hidden;
     background-color: #FFF2E6;
-    transform: translateY(150px);
+    transform: translateY(24vh);
     opacity: 0;
     transition: opacity 0.2 ease;
     transition: transform 0.5s ease;
@@ -405,7 +426,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: #FFF2E6;
 }
 .info-content p {
@@ -425,17 +446,18 @@ body {
     font-size: var(--recipe-fs);
     color: #00340B;
     margin-top: 20px;
+    line-height: 1.3;
 }
 .two-buttons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: var(--twoButtons-gap);
     background-color: #FFF2E6;
 }
 .view-map {
     font-size: var(--twoButtons-fs);
     color: #00340B;
-    background-color: #FDF9F0;
+    background-color: #FFF9F4;
     border: 1px solid #00340B;
     border-radius: var(--border-rd);
     padding: var(--twoButtons-pd);
@@ -443,13 +465,13 @@ body {
     transition: all 0.2s ease-in-out;
 }
 .view-map:hover {
-    color: #FDF9F0;
+    color: #FFF9F4;
     background-color: #00340B;
     transform: translateY(-2px);
 }
 .order-rest {
     font-size: var(--twoButtons-fs);
-    color: #FDF9F0;
+    color: #FFF9F4;
     background-color: #00340B;
     border: 1px solid #00340B;
     border-radius: var(--border-rd);
@@ -477,7 +499,6 @@ body {
   margin: 0;
   text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.406);
   background: transparent;
-  position: relative;
   z-index: 5;
   opacity: 0;
   transition: all 0.5s ease;
@@ -567,10 +588,12 @@ body {
     font-weight: 500;
     color: #00340B;
     margin-top: var(--storyContent-mgTop);
+    text-align: center;
+    line-height: 1.3;
 }
 .learn-more {
     font-size: var(--learnMore-fs);
-    color: #FDF9F0;
+    color: #FFF9F4;
     background-color: #00340B;
     border: 1px solid #00340B;
     border-radius: var(--border-rd);
@@ -587,13 +610,15 @@ body {
 .pink-background {
   width: 100%;
   height: var(--pinkBackground-hg);
+  max-height: 90vh;
   padding: var(--pinkBackground-pd);
   background-color: #FFB6C1;
   clip-path: var(--pinkBackground-clip);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: start;
   align-items: center;
+  gap: 1.5em
 }
 .franchise {
     width: var(--franchise-wd);
@@ -611,9 +636,11 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     color: #FFF5EE;
-    text-shadow: -2px -2px 0px rgb(0, 0, 0), 2px 2px 0px rgba(0, 0, 0, 0.425);
     background: transparent;
     text-align: center;
+    letter-spacing: -0.05em;
+    line-height: 1.3;
+    text-shadow: -1.5px -1.5px 3px rgb(0, 0, 0), 1.5px 1.5px 3px rgba(0, 0, 0, 0.425);
 }
 .art-collection-one {
     width: var(--artCollectionOne-wd);
@@ -630,6 +657,7 @@ body {
     left: var(--artCollectionTwo-left);
     transform: rotate(5deg);
     z-index: 5;
+    display: none;
 }
 .contact-us {
     width: var(--contactUs-wd);
@@ -643,11 +671,12 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    line-height: 1.3;
 }
 .learn-about-franchise {
     font-size: var(--learnAboutFranchise-fs);
     color: #00340B;
-    background-color: #FDF9F0;
+    background-color: #FFF9F4;
     border: 1px solid #00340B;
     border-radius: var(--border-rd);
     padding: var(--learnAboutFranchise-pd);
@@ -656,7 +685,7 @@ body {
     margin-top: var(--learnAboutFranchise-mgTop);
 }
 .learn-about-franchise:hover {
-    color: #FDF9F0;
+    color: #FFF9F4;
     background-color: #00340B;
     transform: translateY(-2px);
 }
@@ -666,6 +695,7 @@ body {
 .newspaper-wrapper {
     width: var(--newspaperWrapper-wd);
     height: var(--newspaperWrapper-hg);
+    max-height: 48rem;
     position: relative;
     margin: 0 auto;
 }
@@ -690,8 +720,9 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.183);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding: var(--newspaper-pd);
 }
 .newspaper-heading {
     font-family: "Berkshire Swash", cursive;
@@ -703,14 +734,13 @@ body {
     text-align: center;
     color: #006416;
     margin: 0;
-    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.406);
-    margin: var(--newspaperHeading-mg);
     background: transparent;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.406);
 }
 .latest-news {
     font-size: var(--latestNews-fs);
     color: #00340B;
-    background-color: #FDF9F0;
+    background-color: #FFF9F4;
     border: 1px solid #00340B;
     border-radius: var(--border-rd);
     padding: var(--latestNews-pd);
@@ -718,17 +748,22 @@ body {
     transition: all 0.2s ease-in-out;
 }
 .latest-news:hover {
-    color: #FDF9F0;
+    color: #FFF9F4;
     background-color: #00340B;
     transform: translateY(-2px);
 }
 .gazette-imgs {
+    width: 90%;
     display: flex;
-    gap: var(--gazetteImgs-gap);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     background: transparent;
     position: relative;
+    gap: var(--gazetteImgs-gap);
 }
 .gazette-one {
+    width: var(--gazetteImg-wd);
     position: relative;
     background: transparent;
 }
@@ -749,7 +784,7 @@ body {
     z-index: 1;
 }
 .gazette-img-one {
-    width: var(--gazetteImg-wd);
+    width: 100%;
     border-radius: var(--gazetteImg-br);
     background: transparent;
     position: relative;
@@ -764,6 +799,7 @@ body {
     background: transparent;
 }
 .gazette-two {
+    width: var(--gazetteImg-wd);
     position: relative;
     background: transparent;
 }
@@ -784,7 +820,7 @@ body {
     z-index: 1;
 }
 .gazette-img-two {
-    width: var(--gazetteImg-wd);
+    width: 100%;
     border-radius: var(--gazetteImg-br);
     background: transparent;
 }
@@ -797,1290 +833,311 @@ body {
     margin-top: var(--gazetteCaption-mgTop);
     background: transparent;
 }
+.gazette-one, .gazette-two {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--gazetteNews-gap);
+    }
 .small-screen-date, .small-screen-paragraph {
         display: none;
 }
-
-@media (max-width: 2900px) {
+@media (min-width: 250px) {
     :root {
         /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 250px;
-    --welcome-fs: 5.5rem;
-    --branches-wd: 600px;
-    --branches-hg: 85px;
-    --branches-fs: 32px;
-    --branches-pd: 0 18px;
-    --branchesArow-fs: 30px;
-    --branchList-hg: 55px;
-    --researchBtn-fs: 35px;
-    --researchBtn-pd: 12px 50px;
-    --border-rd: 7px;
-    --intro-gap: 45px;
-    --researchBranches-gap: 25px;
-    
-    --leftImg-wd: 500px;
-    --leftImg-top: 250px;
-    --leftImgAft-wd: 380px; 
-    --leftImgAft-right: -120px;
-    --leftImgAft-btm: -190px;
-    
-    --rightImg-wd: 500px;
-    --rightImg-top: 250px;
-    --rightImgAft-wd: 340px;
-    --rightImgAft-left: 30px;
-    --rightImgAft-btm: -150px;
-    
-        /*Second Content CSS Responsive*/
-    --secondContent-mgTop: 40px;  
-    --secondContent-pdLeft: 100px;
-    --secondContent-wd: 50%;
-
-    --creativeLogo-wd: 350px;
-    
-    --twoBurgers-wd: 450px;
-    --twoBurgers-Top: 200px;
-    --twoBurgersAft-wdnhg: 240px;
-    --twoBurgersAft-btm: 150px;
-    --twoBurgersAft-left: -140px;
-    --twoBurgersBef-wdnhg: 400px;
-    --twoBurgersBef-btm: -300px;
-    --twoBurgersBef-right: -290px;
-    --theLine-wd: 540px;
-    --theLine-top: 560px;
-    --theLine-left: 640px;
-
-    /*Third Content CSS Responsive*/
-    --thirdContent-wd: 68%;
-    --thirdContent-mgTop: 400px;
-
-    --withFries-wd: 460px;
-    --withFries-btm: 450px;
-
-    --wholeMeal-wd: 900px;
-    --wholeMeal-btm: 0px;
-    --wholeMealBef-wdnhg: 350px;
-    --wholeMealBef-btm: 345px;
-    --wholeMealBef-left: -140px;
-
-    /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 400px;
-    --modelBurger-br: 15px;
-    --burgerOfTheDay-wd: 850px;
-    --infoContentPara-wd: 1000px;
-    --recipe-fs: 32px;
-    --recipe-fw:500;
-    --twoButtons-fs: 38px;
-    --twoButtons-pd: 14px 30px;
-    --twoButtons-gap: 40px;
-
-    /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 400px; 
-    --storyTitle-fs: 250px; 
-    --makeYourOrder-wd: 70%; 
-    --makeYourOrder-mgTop: -25px;
-    --storyContent-wd: 70%; 
-    --storyContent-fs: 35.5px; 
-    --storyContent-mgTop: 65px;
-    --learnMore-fs: 36px; 
-    --learnMore-mgTop: 50px; 
-    --learnMore-pd: 20px 40px;
-    
-    /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 600px;
-    --pinkBackground-hg: 1200px;
-    --pinkBackground-pd: 280px 0 230px;
-    --pinkBackground-clip: path('M 0 0 Q 1400 100, 2800 0 L 2800 1200 Q 1400 1400, 0 1200 Z');
-    --franchise-wd: 500px; 
-    --franchise-top: -40px;
-    --followDreams-wd: 1700px; 
-    --followDreams-fs: 110px;
-    --artCollectionOne-wd: 450px; 
-    --artCollectionOne-top: -50px; 
-    --artCollectionOne-left: 45px;
-    --artCollectionTwo-wd: 450px; 
-    --artCollectionTwo-top: 40%; 
-    --artCollectionTwo-left: 80%;
-    --contactUs-wd: 1500px; 
-    --contactUs-fs: 40px;
-    --learnAboutFranchise-fs: 36px; 
-    --learnAboutFranchise-pd: 20px 40px; 
-    --learnAboutFranchise-mgTop: 80px;
-    
-    /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 700px 0 150px; 
-    --newspaperWrapper-wd: 90%; 
-    --newspaperWrapper-hg: 100vh; 
-    --newspaper-br: 5px;
-    --newspaperHeading-fs: 195px; 
-    --newspaperHeading-mg: 20px auto;
-    --latestNews-fs: 42px; 
-    --latestNews-pd: 15px 40px; 
-    --gazetteImgs-gap: 80px;
-    --gazetteDate-fs: 34px; 
-    --gazetteDate-top: 30px; 
-    --gazetteDate-left: 35px;
-    --gazetteOneDate-pd: 14px 33px; 
-    --gazetteTwoDate-pd: 14px 35px;
-    --gazetteImg-wd: 1000px; 
-    --gazetteImg-br: 12px;
-    --gazetteCaption-wd: 1000px; 
-    --gazetteCaption-fs: 32px; 
-    --gazetteCaption-mgTop: 10px;
-    }
-    .slider {
-        display: none;
-    }
-}
-@media (max-width: 2560px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 250px;
-    --welcome-fs: 5.0rem;
-    --branches-wd: 560px;
-    --branches-hg: 75px;
-    --branches-fs: 30px;
-    --branches-pd: 0 18px;
-    --branchesArow-fs: 30px;
-    --branchList-hg: 55px;
-    --researchBtn-fs: 33px;
-    --researchBtn-pd: 11px 45px;
-    --border-rd: 7px;
-    --intro-gap: 42px;
-    --researchBranches-gap: 22px;
-    
-    --leftImg-wd: 440px;
-    --leftImg-top: 250px;
-    --leftImgAft-wd: 340px; 
-    --leftImgAft-right: -100px;
-    --leftImgAft-btm: -170px;
-    
-    --rightImg-wd: 440px;
-    --rightImg-top: 250px;
-    --rightImgAft-wd: 300px;
-    --rightImgAft-left: 30px;
-    --rightImgAft-btm: -150px;
-    
-        /*Second Content CSS Responsive*/
-    --secondContent-mgTop: 40px;  
-    --secondContent-pdLeft: 100px;
-    --secondContent-wd: 50%;
-
-    --creativeLogo-wd: 315px;
-    
-    --twoBurgers-wd: 420px;
-    --twoBurgers-Top: 200px;
-    --twoBurgersAft-wdnhg: 220px;
-    --twoBurgersAft-btm: 180px;
-    --twoBurgersAft-left: -130px;
-    --twoBurgersBef-wdnhg: 380px;
-    --twoBurgersBef-btm: -265px;
-    --twoBurgersBef-right: -270px;
-    --theLine-wd: 485px;
-    --theLine-top: 500px;
-    --theLine-left: 595px;
-    
-    /*Third Content CSS Responsive*/
-    --thirdContent-wd: 68%;
-    --thirdContent-mgTop: 400px;
-
-    --withFries-wd: 420px;
-    --withFries-btm: 450px;
-
-    --wholeMeal-wd: 840px;
-    --wholeMeal-btm: 0px;
-    --wholeMealBef-wdnhg: 320px;
-    --wholeMealBef-btm: 330px;
-    --wholeMealBef-left: -125px;
+    --topcontent-mgTop: 25vh;
+    --welcome-wd: 85%;
+    --welcome-fs: clamp(2.43rem, 15.6vw, 3.5rem);
+    --branches-wd: 90vw;
+    --branches-hg: 2.4em;
+    --branches-fs: clamp(0.95rem, 4.5vw, 1.2rem);
+    --branches-pd: 0 0.8em;
+    --branchList-hg: 2em;
+    --researchBtn-fs: clamp(1rem, 8vw, 1.4rem);
+    --researchBtn-pd: 0.5em 1.2em;
+    --border-rd: 0.25em;
+    --intro-gap: 0.3em;
+    --researchBranches-gap: 2em;
     
     /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 350px;
-    --modelBurger-br: 15px;
-    --burgerOfTheDay-wd: 750px;
-    --infoContentPara-wd: 900px;
-    --recipe-fs: 30px;
-    --recipe-fw:500;
-    --twoButtons-fs: 35px;
-    --twoButtons-pd: 12px 30px;
-    --twoButtons-gap: 35px;
-
-    /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 300px; 
-    --storyTitle-fs: 220px; 
-    --makeYourOrder-wd: 70%; 
-    --makeYourOrder-mgTop: -25px;
-    --storyContent-wd: 70%; 
-    --storyContent-fs: 33px; 
-    --storyContent-mgTop: 60px;
-    --learnMore-fs: 32px; 
-    --learnMore-mgTop: 45px; 
-    --learnMore-pd: 18px 40px;
-    
-    /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 500px;
-    --pinkBackground-hg: 1080px;
-    --pinkBackground-pd: 255px 0 205px;
-    --pinkBackground-clip: path('M 0 0 Q 1250 90, 2500 0 L 2500 1080 Q 1250 1260, 0 1080 Z');
-    --franchise-wd: 450px; 
-    --franchise-top: -36px;
-    --followDreams-wd: 1550px; 
-    --followDreams-fs: 100px;
-    --artCollectionOne-wd: 405px; 
-    --artCollectionOne-top: -45px; 
-    --artCollectionOne-left: 40px;
-    --artCollectionTwo-wd: 405px; 
-    --artCollectionTwo-top: 40%; 
-    --artCollectionTwo-left: 80%;
-    --contactUs-wd: 1340px; 
-    --contactUs-fs: 36px;
-    --learnAboutFranchise-fs: 32px; 
-    --learnAboutFranchise-pd: 18px 36px; 
-    --learnAboutFranchise-mgTop: 70px;
-    
-    /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 625px 0 134px; 
-    --newspaperWrapper-wd: 90%; 
-    --newspaperWrapper-hg: 100vh; 
-    --newspaper-br: 5px;
-    --newspaperHeading-fs: 171px; 
-    --newspaperHeading-mg: 18px auto;
-    --latestNews-fs: 38px; 
-    --latestNews-pd: 14px 36px; 
-    --gazetteImgs-gap: 70px;
-    --gazetteDate-fs: 30px; 
-    --gazetteDate-top: 27px; 
-    --gazetteDate-left: 31px;
-    --gazetteOneDate-pd: 13px 30px; 
-    --gazetteTwoDate-pd: 13px 31px;
-    --gazetteImg-wd: 900px; 
-    --gazetteImg-br: 11px;
-    --gazetteCaption-wd: 900px; 
-    --gazetteCaption-fs: 29px; 
-    --gazetteCaption-mgTop: 9px;
-   }
-}
-@media (max-width: 2200px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 190px;
-    --welcome-fs: 4.2rem;
-    --branches-wd: 500px;
-    --branches-hg: 65px;
-    --branches-fs: 28px;
-    --branches-pd: 0 20px;
-    --branchesArow-fs: 25px;
-    --branchList-hg: 55px;
-    --researchBtn-fs: 28px;
-    --researchBtn-pd: 10px 38px;
-    --border-rd: 7px;
-    --intro-gap: 35px;
-    --researchBranches-gap: 18px;
-    
-    --leftImg-wd: 400px;
-    --leftImg-top: 250px;
-    --leftImgAft-wd: 300px;
-    --leftImgAft-right: -80px;
-    --leftImgAft-btm: -140px;
-    
-    --rightImg-wd: 400px;
-    --rightImg-top: 250px;
-    --rightImgAft-wd: 270px;
-    --rightImgAft-left: 30px;
-    --rightImgAft-btm: -120px;
-
-        /*Second Content CSS Responsive*/
-    --secondContent-mgTop: 40px; 
-    --secondContent-pdLeft: 100px; 
-    --secondContent-wd: 50%;
-
-    --creativeLogo-wd: 260px;
-    
-    --twoBurgers-wd: 360px;
-    --twoBurgers-Top: 160px;
-    --twoBurgersAft-wdnhg: 190px;
-    --twoBurgersAft-btm: 160px;
-    --twoBurgersAft-left: -120px;
-    --twoBurgersBef-wdnhg: 330px;
-    --twoBurgersBef-btm: -235px;
-    --twoBurgersBef-right: -235px;
-    --theLine-wd: 445px;
-    --theLine-top: 430px;
-    --theLine-left: 510px;
-    
-    /*Third Content CSS Responsive*/
-    --thirdContent-wd: 69%;
-    --thirdContent-mgTop: 420px;
-
-    --withFries-wd: 380px;
-    --withFries-btm: 450px;
-
-    --wholeMeal-wd: 760px;
-    --wholeMeal-btm:30px;
-    --wholeMealBef-wdnhg: 280px;
-    --wholeMealBef-btm: 305px;
-    --wholeMealBef-left: -100px;
-    
-    /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 300px;
-    --modelBurger-br: 15px;
-    --burgerOfTheDay-wd: 650px;
-    --infoContentPara-wd: 800px;
-    --recipe-fs: 26px;
+    --fourthContent-mgTop: 25vh;
+    --fourthContent-hg: 190vw;
+    --modelBurger-wd: 80%;
+    --modelBurger-br: 0.5em;
+    --burgerOfTheDay-wd: 90%;
+    --infoContentPara-wd: 95%;
+    --recipe-fs: clamp(0.7rem, 4vw, 1rem);
     --recipe-fw: 500;
-    --twoButtons-fs: 30px;
-    --twoButtons-pd: 12px 28px;
-    --twoButtons-gap: 30px;
+    --twoButtons-fs: clamp(0.9rem, 5vw, 1.2rem);
+    --twoButtons-pd: 0.5em 12vw;
+    --twoButtons-gap: 0.3em;
     
     /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 350px; 
-    --storyTitle-fs: 200px; 
-    --makeYourOrder-wd: 70%; 
-    --makeYourOrder-mgTop: -25px;
-    --storyContent-wd: 70%; 
-    --storyContent-fs: 29px; 
-    --storyContent-mgTop: 50px;
-    --learnMore-fs: 29px; 
-    --learnMore-mgTop: 35px; 
-    --learnMore-pd: 16px 35px;
+    --fifthContent-mgTop: 20vh;
+    --storyTitle-fs: clamp(2.5rem, 16vw, 3.6rem); 
+    --makeYourOrder-wd: 90%;
+    --makeYourOrder-mgTop: -1.5vh;
+    --storyContent-wd: 85%;
+    --storyContent-fs: clamp(0.75rem, 4.5vw, 1rem);
+    --storyContent-mgTop: 2.5vh;
+    --learnMore-fs: clamp(0.9rem, 5.4vw, 1.2rem);
+    --learnMore-pd: 0.6em 1em;
+    --learnMore-mgTop: 3vh;
     
     /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 450px;
-    --pinkBackground-hg: 950px;
-    --pinkBackground-pd: 225px 0 180px;
-    --pinkBackground-clip: path('M 0 0 Q 1100 80, 2200 0 L 2200 950 Q 1100 1100, 0 950 Z');
-    --franchise-wd: 395px; 
-    --franchise-top: -32px;
-    --followDreams-wd: 1350px; 
-    --followDreams-fs: 88px;
-    --artCollectionOne-wd: 360px; 
-    --artCollectionOne-top: -40px; 
-    --artCollectionOne-left: 35px;
-    --artCollectionTwo-wd: 360px; 
-    --artCollectionTwo-top: 40%; 
-    --artCollectionTwo-left: 80%;
-    --contactUs-wd: 1180px; 
-    --contactUs-fs: 32px;
-    --learnAboutFranchise-fs: 28px; 
-    --learnAboutFranchise-pd: 16px 32px; 
-    --learnAboutFranchise-mgTop: 62px;
+    --sixthContent-mgTop: 30vh;
+    --pinkBackground-hg: 70vh;
+    --pinkBackground-pd: 13vh 0 0;
+    --pinkBackground-clip: shape(from 0vw 0vh, curve to 100vw 0vh with 50vw 6vh, line to 100vw 72.5vh, curve to 0vw 72.5vh with 50vw 70vh, close);
+    --franchise-wd: 28vh;
+    --franchise-top: -8vh;
+    --followDreams-wd: 90%;
+    --followDreams-fs: clamp(1.2rem, 7vw, 2rem);
+    --artCollectionOne-wd: 55%;
+    --artCollectionOne-top: 78%; 
+    --artCollectionOne-left: 25%;
+    --contactUs-wd: 90%;
+    --contactUs-fs: clamp(0.75rem, 4.8vw, 1rem);
+    --learnAboutFranchise-fs: clamp(0.9rem, 5.4vw, 1.2rem); 
+    --learnAboutFranchise-pd: 0.5em 1em; 
     
     /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 550px 0 118px; 
-    --newspaperWrapper-wd: 90%; 
-    --newspaperWrapper-hg: 100vh; 
-    --newspaper-br: 4px;
-    --newspaperHeading-fs: 153px; 
-    --newspaperHeading-mg: 16px auto;
-    --latestNews-fs: 33px; 
-    --latestNews-pd: 12px 31px; 
-    --gazetteImgs-gap: 60px;
-    --gazetteDate-fs: 27px; 
-    --gazetteDate-top: 24px; 
-    --gazetteDate-left: 27px;
-    --gazetteOneDate-pd: 11px 26px; 
-    --gazetteTwoDate-pd: 11px 28px;
-    --gazetteImg-wd: 790px; 
-    --gazetteImg-br: 10px;
-    --gazetteCaption-wd: 790px; 
-    --gazetteCaption-fs: 26px; 
-    --gazetteCaption-mgTop: 8px;
-   }
-}
-@media (max-width: 2000px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 140px;
-    --welcome-fs: 3.7rem;
-    --branches-wd: 440px;
-    --branches-hg: 55px;
-    --branches-fs: 25px;
-    --branches-pd: 0 20px;
-    --branchList-hg: 55px;
-    --researchBtn-fs: 25px;
-    --researchBtn-pd: 9px 35px;
-    --border-rd: 5px;
-    --intro-gap: 30px;
-    --researchBranches-gap: 15px;
-    
-    --leftImg-wd: 380px;
-    --leftImg-top: 200px;
-    --leftImgAft-wd: 280px;
-    --leftImgAft-right: -80px;
-    --leftImgAft-btm: -140px;
-    
-    --rightImg-wd: 380px;
-    --rightImg-top: 230px;
-    --rightImgAft-wd: 250px;
-    --rightImgAft-left: 30px;
-    --rightImgAft-btm: -110px;
-    
-        /*Second Content CSS Responsive*/
-    --secondContent-mgTop: 30px;  
-    --secondContent-pdLeft: 100px;
-    --secondContent-wd: 50%;
-
-    --creativeLogo-wd: 240px;
-    
-    --twoBurgers-wd: 320px;
-    --twoBurgers-Top: 140px;
-    --twoBurgersAft-wdnhg: 180px;
-    --twoBurgersAft-btm: 160px;
-    --twoBurgersAft-left: -110px;
-    --twoBurgersBef-wdnhg: 300px;
-    --twoBurgersBef-btm: -215px;
-    --twoBurgersBef-right: -215px;
-    --theLine-wd: 405px;
-    --theLine-top: 383px;
-    --theLine-left: 458px;
-    
-    /*Third Content CSS Responsive*/
-    --thirdContent-wd: 69%;
-    --thirdContent-mgTop: 430px;
-
-    --withFries-wd: 340px;
-    --withFries-btm: 450px;
-
-    --wholeMeal-wd: 700px;
-    --wholeMeal-btm: 90px;
-    --wholeMealBef-wdnhg: 250px;
-    --wholeMealBef-btm: 290px;
-    --wholeMealBef-left: -90px;
-    
-    /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 200px;
-    --modelBurger-br: 12px;
-    --burgerOfTheDay-wd: 550px;
-    --infoContentPara-wd: 740px;
-    --recipe-fs: 23px;
-    --recipe-fw: 500;
-    --twoButtons-fs: 25px;
-    --twoButtons-pd: 10px 26px;
-    --twoButtons-gap: 25px;
-    
-    /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 300px; 
-    --storyTitle-fs: 185px; 
-    --makeYourOrder-wd: 70%; 
-    --makeYourOrder-mgTop: -25px;
-    --storyContent-wd: 70%; 
-    --storyContent-fs: 26.5px; 
-    --storyContent-mgTop: 45px;
-    --learnMore-fs: 26.5px; 
-    --learnMore-mgTop: 35px; 
-    --learnMore-pd: 16px 35px;
-    
-    /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 450px;
-    --pinkBackground-hg: 860px;
-    --pinkBackground-pd: 200px 0 165px;
-    --pinkBackground-clip: path('M 0 0 Q 1000 72, 2000 0 L 2000 860 Q 1000 1000, 0 860 Z');
-    --franchise-wd: 360px; 
-    --franchise-top: -30px;
-    --followDreams-wd: 1220px; 
-    --followDreams-fs: 78px;
-    --artCollectionOne-wd: 330px; 
-    --artCollectionOne-top: -36px; 
-    --artCollectionOne-left: 30px;
-    --artCollectionTwo-wd: 330px; 
-    --artCollectionTwo-top: 40%; 
-    --artCollectionTwo-left: 80%;
-    --contactUs-wd: 1070px; 
-    --contactUs-fs: 29px;
-    --learnAboutFranchise-fs: 26px; 
-    --learnAboutFranchise-pd: 14px 29px; 
-    --learnAboutFranchise-mgTop: 56px;
-    
-    /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 500px 0 107px; 
-    --newspaperWrapper-wd: 90%; 
-    --newspaperWrapper-hg: 100vh; 
-    --newspaper-br: 4px;
-    --newspaperHeading-fs: 139px; 
-    --newspaperHeading-mg: 15px auto;
-    --latestNews-fs: 30px; 
-    --latestNews-pd: 11px 28px; 
-    --gazetteImgs-gap: 54px;
-    --gazetteDate-fs: 24px; 
-    --gazetteDate-top: 21px; 
-    --gazetteDate-left: 25px;
-    --gazetteOneDate-pd: 10px 24px; 
-    --gazetteTwoDate-pd: 10px 25px;
-    --gazetteImg-wd: 720px; 
-    --gazetteImg-br: 9px;
-    --gazetteCaption-wd: 720px; 
-    --gazetteCaption-fs: 23px; 
-    --gazetteCaption-mgTop: 8px;
-    }
-}
-@media (max-width: 1800px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 140px;
-    --welcome-fs: 3.2rem;
-    --branches-wd: 360px;
-    --branches-hg: 48px;
-    --branches-fs: 20px;
-    --branches-pd: 0 20px;
-    --branchList-hg: 55px;
-    --researchBtn-fs: 20px;
-    --researchBtn-pd: 9px 30px;
-    --border-rd: 5px;
-    --intro-gap: 25px;
-    --researchBranches-gap: 12px;
-    
-    --leftImg-wd: 340px;
-    --leftImg-top: 190px;
-    --leftImgAft-wd: 240px;
-    --leftImgAft-right: -70px;
-    --leftImgAft-btm: -120px;
-    
-    --rightImg-wd: 340px;
-    --rightImg-top: 220px;
-    --rightImgAft-wd: 230px;
-    --rightImgAft-left: 30px;
-    --rightImgAft-btm: -100px;
-    
-        /*Second Content CSS Responsive*/
-    --secondContent-mgTop: 70px;  
-    --secondContent-pdLeft: 100px;
-    --secondContent-wd: 50%;
-
-    --creativeLogo-wd: 210px;
-    
-    --twoBurgers-wd: 280px;
-    --twoBurgers-Top: 100px;
-    --twoBurgersAft-wdnhg: 170px;
-    --twoBurgersAft-btm: 130px;
-    --twoBurgersAft-left: -100px;
-    --twoBurgersBef-wdnhg: 270px;
-    --twoBurgersBef-btm: -200px;
-    --twoBurgersBef-right: -190px;
-    --theLine-wd: 365px;
-    --theLine-top: 340px;
-    --theLine-left: 400px;
-    
-    /*Third Content CSS Responsive*/
-    --thirdContent-wd: 69%;
-    --thirdContent-mgTop: 430px;
-
-    --withFries-wd: 300px;
-    --withFries-btm: 450px;
-
-    --wholeMeal-wd: 640px;
-    --wholeMeal-btm: 140px;
-    --wholeMealBef-wdnhg: 220px;
-    --wholeMealBef-btm: 270px;
-    --wholeMealBef-left: -70px;
-    
-    /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 100px;
-    --modelBurger-br: 12px;
-    --burgerOfTheDay-wd: 500px;
-    --infoContentPara-wd: 650px;
-    --recipe-fs: 20px;
-    --recipe-fw: 500;
-    --twoButtons-fs: 22px;
-    --twoButtons-pd: 10px 24px;
-    --twoButtons-gap: 25px;
-    
-    /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 300px; 
-    --storyTitle-fs: 160px; 
-    --makeYourOrder-wd: 70%; 
-    --makeYourOrder-mgTop: -25px;
-    --storyContent-wd: 70%; 
-    --storyContent-fs: 24px; 
-    --storyContent-mgTop: 40px;
-    --learnMore-fs: 24px; 
-    --learnMore-mgTop: 30px; 
-    --learnMore-pd: 14px 30px;
-    
-    /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 400px;
-    --pinkBackground-hg: 770px;
-    --pinkBackground-pd: 180px 0 150px;
-    --pinkBackground-clip: path('M 0 0 Q 900 64, 1800 0 L 1800 770 Q 900 900, 0 770 Z');
-    --franchise-wd: 320px; 
-    --franchise-top: -28px;
-    --followDreams-wd: 1100px; 
-    --followDreams-fs: 70px;
-    --artCollectionOne-wd: 295px; 
-    --artCollectionOne-top: -32px; 
-    --artCollectionOne-left: 28px;
-    --artCollectionTwo-wd: 295px; 
-    --artCollectionTwo-top: 40%; 
-    --artCollectionTwo-left: 80%;
-    --contactUs-wd: 960px; 
-    --contactUs-fs: 26px;
-    --learnAboutFranchise-fs: 23px; 
-    --learnAboutFranchise-pd: 13px 26px; 
-    --learnAboutFranchise-mgTop: 50px;
-    
-    /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 450px 0 96px; 
-    --newspaperWrapper-wd: 90%; 
-    --newspaperWrapper-hg: 100vh; 
-    --newspaper-br: 4px;
-    --newspaperHeading-fs: 124px; 
-    --newspaperHeading-mg: 13px auto;
-    --latestNews-fs: 27px; 
-    --latestNews-pd: 10px 25px; 
-    --gazetteImgs-gap: 50px;
-    --gazetteDate-fs: 22px; 
-    --gazetteDate-top: 19px; 
-    --gazetteDate-left: 22px;
-    --gazetteOneDate-pd: 9px 22px; 
-    --gazetteTwoDate-pd: 9px 23px;
-    --gazetteImg-wd: 650px; 
-    --gazetteImg-br: 8px;
-    --gazetteCaption-wd: 650px; 
-    --gazetteCaption-fs: 21px; 
-    --gazetteCaption-mgTop: 7px;
-    }
-}
-@media (max-width: 1600px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 140px;
-    --welcome-fs: 2.8rem;
-    --branches-wd: 320px;
-    --branches-hg: 45px;
-    --branches-fs: 18px;
-    --branches-pd: 0 20px;
-    --branchList-hg: 40px;
-    --researchBtn-fs: 18px;
-    --researchBtn-pd: 9px 25px;
-    --border-rd: 5px;
-    --intro-gap: 23px;
-    --researchBranches-gap: 10px;
-    
-    --leftImg-wd: 280px;
-    --leftImg-top: 170px;
-    --leftImgAft-wd: 200px;
-    --leftImgAft-right: -50px;
-    --leftImgAft-btm: -100px;
-    
-    --rightImg-wd: 280px;
-    --rightImg-top: 200px;
-    --rightImgAft-wd: 200px;
-    --rightImgAft-left: 25px;
-    --rightImgAft-btm: -85px;
-    
-        /*Second Content CSS Responsive*/
-    --secondContent-mgTop: 70px;  
-    --secondContent-pdLeft: 100px;
-    --secondContent-wd: 53%;
-
-    --creativeLogo-wd: 195px;
-    
-    --twoBurgers-wd: 250px;
-    --twoBurgers-Top: 85px;
-    --twoBurgersAft-wdnhg: 150px;
-    --twoBurgersAft-btm: 120px;
-    --twoBurgersAft-left: -90px;
-    --twoBurgersBef-wdnhg: 240px;
-    --twoBurgersBef-btm: -175px;
-    --twoBurgersBef-right: -170px;
-    --theLine-wd: 310px;
-    --theLine-top: 300px;
-    --theLine-left: 355px;
-    
-    /*Third Content CSS Responsive*/
-    --thirdContent-wd: 69%;
-    --thirdContent-mgTop: 430px;
-
-    --withFries-wd: 240px;
-    --withFries-btm: 450px;
-
-    --wholeMeal-wd: 580px;
-    --wholeMeal-btm: 170px;
-    --wholeMealBef-wdnhg: 200px;
-    --wholeMealBef-btm: 245px;
-    --wholeMealBef-left: -65px;
-    
-    /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 100px;
-    --modelBurger-br: 10px;
-    --burgerOfTheDay-wd: 450px;
-    --infoContentPara-wd: 580px;
-    --recipe-fs: 18px;
-    --recipe-fw: 500;
-    --twoButtons-fs: 19px;
-    --twoButtons-pd: 10px 21px;
-    --twoButtons-gap: 20px;
-    
-    /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 250px; 
-    --storyTitle-fs: 140px; 
-    --makeYourOrder-wd: 70%; 
-    --makeYourOrder-mgTop: -25px;
-    --storyContent-wd: 70%; 
-    --storyContent-fs: 21px; 
-    --storyContent-mgTop: 35px;
-    --learnMore-fs: 21px; 
-    --learnMore-mgTop: 25px; 
-    --learnMore-pd: 13px 28px;
-    
-    /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 350px;
-    --pinkBackground-hg: 690px;
-    --pinkBackground-pd: 160px 0 135px;
-    --pinkBackground-clip: path('M 0 0 Q 800 58, 1600 0 L 1600 690 Q 800 805, 0 690 Z');
-    --franchise-wd: 285px; 
-    --franchise-top: -25px;
-    --followDreams-wd: 980px; 
-    --followDreams-fs: 62px;
-    --artCollectionOne-wd: 260px; 
-    --artCollectionOne-top: -28px; 
-    --artCollectionOne-left: 25px;
-    --artCollectionTwo-wd: 260px; 
-    --artCollectionTwo-top: 40%; 
-    --artCollectionTwo-left: 80%;
-    --contactUs-wd: 860px; 
-    --contactUs-fs: 23px;
-    --learnAboutFranchise-fs: 21px; 
-    --learnAboutFranchise-pd: 12px 24px; 
-    --learnAboutFranchise-mgTop: 44px;
-    
-    /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 400px 0 86px; 
-    --newspaperWrapper-wd: 90%; 
-    --newspaperWrapper-hg: 100vh; 
-    --newspaper-br: 3px;
-    --newspaperHeading-fs: 111px; 
-    --newspaperHeading-mg: 12px auto;
-    --latestNews-fs: 24px; 
-    --latestNews-pd: 9px 22px; 
-    --gazetteImgs-gap: 45px;
-    --gazetteDate-fs: 19px; 
-    --gazetteDate-top: 17px; 
-    --gazetteDate-left: 20px;
-    --gazetteOneDate-pd: 8px 19px; 
-    --gazetteTwoDate-pd: 8px 20px;
-    --gazetteImg-wd: 575px; 
-    --gazetteImg-br: 7px;
-    --gazetteCaption-wd: 575px; 
-    --gazetteCaption-fs: 18px; 
-    --gazetteCaption-mgTop: 6px;
-    }
-}
-@media (max-width: 1440px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 150px;
-    --welcome-fs: 2.5rem;
-    --branches-wd: 300px;
-    --branches-hg: 40px;
-    --branches-fs: 16px;
-    --branches-pd: 0 16px;
-    --branchList-hg: 30px;
-    --researchBtn-fs: 18px;
-    --researchBtn-pd: 9px 18px;
-    --border-rd: 5px;
-    --intro-gap: 23px;
-    --researchBranches-gap: 8px;
-    
-    --leftImg-wd: 240px;
-    --leftImg-top: 120px;
-    --leftImgAft-wd: 180px;
-    --leftImgAft-right: -55px;
-    --leftImgAft-btm: -90px;
-
-    --rightImg-wd: 240px;
-    --rightImg-top: 120px;
-    --rightImgAft-wd: 160px;
-    --rightImgAft-left: 20px;
-    --rightImgAft-btm: -70px;
-
-        /*Second Content CSS Responsive*/
-    --secondContent-mgTop: 50px; 
-    --secondContent-pdLeft: 100px; 
-    --secondContent-wd: 55%;
-
-    --creativeLogo-wd: 170px;
-    
-    --twoBurgers-wd: 220px;
-    --twoBurgers-Top: 70px;
-    --twoBurgersAft-wdnhg: 130px;
-    --twoBurgersAft-btm: 110px;
-    --twoBurgersAft-left: -80px;
-    --twoBurgersBef-wdnhg: 210px;
-    --twoBurgersBef-btm: -153px;
-    --twoBurgersBef-right: -150px;
-    --theLine-wd: 265px;
-    --theLine-top: 265px;
-    --theLine-left: 315px;
-    
-    /*Third Content CSS Responsive*/
-    --thirdContent-wd: 70%;
-    --thirdContent-mgTop: 430px;
-
-    --withFries-wd: 220px;
-    --withFries-btm: 450px;
-
-    --wholeMeal-wd: 540px;
-    --wholeMeal-btm: 210px;
-    --wholeMealBef-wdnhg: 180px;
-    --wholeMealBef-btm: 235px;
-    --wholeMealBef-left: -60px;
-    
-    /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 50px;
-    --modelBurger-br: 8px;
-    --burgerOfTheDay-wd: 380px;
-    --infoContentPara-wd: 500px;
-    --recipe-fs: 16px;
-    --recipe-fw: 500;
-    --twoButtons-fs: 16px;
-    --twoButtons-pd: 8px 20px;
-    --twoButtons-gap: 20px;
-    
-    /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 200px; 
-    --storyTitle-fs: 120px; 
-    --makeYourOrder-wd: 70%; 
-    --makeYourOrder-mgTop: -25px;
-    --storyContent-wd: 70%; 
-    --storyContent-fs: 19px; 
-    --storyContent-mgTop: 30px;
-    --learnMore-fs: 19px; 
-    --learnMore-mgTop: 20px; 
-    --learnMore-pd: 12px 25px;
-    
-    /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 300px;
-    --pinkBackground-hg: 620px;
-    --pinkBackground-pd: 145px 0 120px;
-    --pinkBackground-clip: path('M 0 0 Q 720 52, 1440 0 L 1440 620 Q 720 725, 0 620 Z');
-    --franchise-wd: 255px; 
-    --franchise-top: -22px;
-    --followDreams-wd: 880px; 
-    --followDreams-fs: 56px;
-    --artCollectionOne-wd: 235px; 
-    --artCollectionOne-top: -25px; 
-    --artCollectionOne-left: 22px;
-    --artCollectionTwo-wd: 235px; 
-    --artCollectionTwo-top: 40%; 
-    --artCollectionTwo-left: 80%;
-    --contactUs-wd: 770px; 
-    --contactUs-fs: 21px;
-    --learnAboutFranchise-fs: 19px; 
-    --learnAboutFranchise-pd: 11px 22px; 
-    --learnAboutFranchise-mgTop: 40px;
-    
-    /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 360px 0 77px; 
-    --newspaperWrapper-wd: 90%; 
-    --newspaperWrapper-hg: 100vh; 
-    --newspaper-br: 3px;
-    --newspaperHeading-fs: 90px; 
-    --newspaperHeading-mg: 10px auto;
-    --latestNews-fs: 22px; 
-    --latestNews-pd: 8px 20px; 
-    --gazetteImgs-gap: 30px;
-    --gazetteDate-fs: 17px; 
-    --gazetteDate-top: 20px; 
-    --gazetteDate-left: 18px;
-    --gazetteOneDate-pd: 7px 17px; 
-    --gazetteTwoDate-pd: 7px 18px;
-    --gazetteImg-wd: 500px; 
-    --gazetteImg-br: 6px;
-    --gazetteCaption-wd: 500px; 
-    --gazetteCaption-fs: 16px; 
-    --gazetteCaption-mgTop: 6px;
-    }
-}
-@media (max-width: 1200px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 100px;
-    --welcome-fs: 2.0rem;
-    --branches-wd: 240px;
-    --branches-hg: 35px;
-    --branches-fs: 14px;
-    --branches-pd: 0 14px;
-    --branchList-hg: 28px;
-    --researchBtn-fs: 14px;
-    --researchBtn-pd: 7px 16px;
-    --border-rd: 4px;
-    --intro-gap: 18px;
-    --researchBranches-gap: 8px;
-    
-    --leftImg-wd: 220px;
-    --leftImg-top: 120px;
-    --leftImgAft-wd: 165px;
-    --leftImgAft-right: -45px;
-    --leftImgAft-btm: -80px;
-
-    --rightImg-wd: 220px;
-    --rightImg-top: 135px;
-    --rightImgAft-wd: 150px;
-    --rightImgAft-left: 15px;
-    --rightImgAft-btm: -65px;
-    
-        /*Second Content CSS Responsive*/
-    --secondContent-mgTop: 50px; 
-    --secondContent-pdLeft: 60px; 
-    --secondContent-wd: 52%;
-
-    --creativeLogo-wd: 140px;
-    
-    --twoBurgers-wd: 190px;
-    --twoBurgers-Top: 50px;
-    --twoBurgersAft-wdnhg: 110px;
-    --twoBurgersAft-btm: 110px;
-    --twoBurgersAft-left: -70px;
-    --twoBurgersBef-wdnhg: 180px;
-    --twoBurgersBef-btm: -132px;
-    --twoBurgersBef-right: -128px;
-    --theLine-wd: 245px;
-    --theLine-top: 230px;
-    --theLine-left: 272px;
-    
-    /*Third Content CSS Responsive*/
-    --thirdContent-wd: 70%;
-    --thirdContent-mgTop: 430px;
-
-    --withFries-wd: 190px;
-    --withFries-btm: 450px;
-
-    --wholeMeal-wd: 430px;
-    --wholeMeal-btm: 260px;
-    --wholeMealBef-wdnhg: 150px;
-    --wholeMealBef-btm: 180px;
-    --wholeMealBef-left: -50px;
-    
-    /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 0;
-    --modelBurger-br: 8px;
-    --burgerOfTheDay-wd: 300px;
-    --infoContentPara-wd: 450px;
-    --recipe-fs: 14px;
-    --recipe-fw: 500;
-    --twoButtons-fs: 14px;
-    --twoButtons-pd: 7px 18px;
-    --twoButtons-gap: 15px;
-    
-    /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 200px; 
-    --storyTitle-fs: 105px; 
-    --makeYourOrder-wd: 70%; 
-    --makeYourOrder-mgTop: -25px;
-    --storyContent-wd: 70%; 
-    --storyContent-fs: 16px; 
-    --storyContent-mgTop: 20px;
-    --learnMore-fs: 16px; 
-    --learnMore-mgTop: 20px; 
-    --learnMore-pd: 10px 23px;
-    
-    /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 250px;
-    --pinkBackground-hg: 520px;
-    --pinkBackground-pd: 120px 0 100px;
-    --pinkBackground-clip: path('M 0 0 Q 600 44, 1200 0 L 1200 520 Q 600 610, 0 520 Z');
-    --franchise-wd: 215px; 
-    --franchise-top: -18px;
-    --followDreams-wd: 730px; 
-    --followDreams-fs: 47px;
-    --artCollectionOne-wd: 195px; 
-    --artCollectionOne-top: -20px; 
-    --artCollectionOne-left: 18px;
-    --artCollectionTwo-wd: 195px; 
-    --artCollectionTwo-top: 40%; 
-    --artCollectionTwo-left: 80%;
-    --contactUs-wd: 650px; 
-    --contactUs-fs: 18px;
-    --learnAboutFranchise-fs: 17px; 
-    --learnAboutFranchise-pd: 10px 19px; 
-    --learnAboutFranchise-mgTop: 34px;
-    
-    /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 300px 0 65px; 
-    --newspaperWrapper-wd: 90%; 
-    --newspaperWrapper-hg: 100vh; 
-    --newspaper-br: 3px;
-    --newspaperHeading-fs: 79.5px; 
-    --newspaperHeading-mg: 8px auto;
-    --latestNews-fs: 18px; 
-    --latestNews-pd: 7px 17px; 
-    --gazetteImgs-gap: 25px;
-    --gazetteDate-fs: 14px; 
-    --gazetteDate-top: 13px; 
-    --gazetteDate-left: 16px;
-    --gazetteOneDate-pd: 6px 15px; 
-    --gazetteTwoDate-pd: 6px 16px;
-    --gazetteImg-wd: 420px; 
-    --gazetteImg-br: 5px;
-    --gazetteCaption-wd: 420px; 
-    --gazetteCaption-fs: 15px; 
-    --gazetteCaption-mgTop: 6px;
-    }
-}
-@media (max-width: 1024px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 120px;
-    --welcome-fs: 1.70rem;
-    --branches-wd: 220px;
-    --branches-hg: 32px;
-    --branches-fs: 12px;
-    --branches-pd: 0 14px;
-    --branchList-hg: 25px;
-    --researchBtn-fs: 12px;
-    --researchBtn-pd: 6px 18px;
-    --border-rd: 4px;
-    --intro-gap: 14px;
-    --researchBranches-gap: 6px;
-    
-    --leftImg-wd: 180px;
-    --leftImg-top: 110px;
-    --leftImgAft-wd: 140px;
-    --leftImgAft-right: -40px;
-    --leftImgAft-btm: -75px;
-
-    --rightImg-wd: 180px;
-    --rightImg-top: 135px;
-    --rightImgAft-wd: 135px;
-    --rightImgAft-left: 15px;
-    --rightImgAft-btm: -60px;
-
-        /*Second Content CSS Responsive*/
-    --secondContent-mgTop: 80px; 
-    --secondContent-pdLeft: 35px; 
-    --secondContent-wd: 50%;
-
-    --creativeLogo-wd: 100px;
-    
-    --twoBurgers-wd: 160px;
-    --twoBurgers-Top: 20px;
-    --twoBurgersAft-wdnhg: 90px;
-    --twoBurgersAft-btm: 90px;
-    --twoBurgersAft-left: -60px;
-    --twoBurgersBef-wdnhg: 150px;
-    --twoBurgersBef-btm: -109px;
-    --twoBurgersBef-right: -107px;
-    --theLine-wd: 225px;
-    --theLine-top: 192px;
-    --theLine-left: 228px;
-    
-    /*Third Content CSS Responsive*/
-    --thirdContent-wd: 72%;
-    --thirdContent-mgTop: 550px;
-
-    --withFries-wd: 160px;
-    --withFries-btm: 450px;
-
-    --wholeMeal-wd: 340px;
-    --wholeMeal-btm: 300px;
-    --wholeMealBef-wdnhg: 120px;
-    --wholeMealBef-btm: 148px;
-    --wholeMealBef-left: -45px;
-    
-    /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 0;
-    --modelBurger-br: 8px;
-    --burgerOfTheDay-wd: 280px;
-    --infoContentPara-wd: 350px;
-    --recipe-fs: 12px;
-    --recipe-fw: 500;
-    --twoButtons-fs: 14px;
-    --twoButtons-pd: 7px 14px;
-    --twoButtons-gap: 15px;
-        
-    /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 150px; 
-    --storyTitle-fs: 90px; 
-    --makeYourOrder-wd: 70%; 
-    --makeYourOrder-mgTop: -25px;
-    --storyContent-wd: 70%; 
-    --storyContent-fs: 13.6px; 
-    --storyContent-mgTop: 15px;
-    --learnMore-fs: 13.6px; 
-    --learnMore-mgTop: 15px; 
-    --learnMore-pd: 9px 22px;
-    
-    /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 250px;
-    --pinkBackground-hg: 445px;
-    --pinkBackground-pd: 105px 0 85px;
-    --pinkBackground-clip: path('M 0 0 Q 512 38, 1024 0 L 1024 445 Q 512 520, 0 445 Z');
-    --franchise-wd: 185px; 
-    --franchise-top: -15px;
-    --followDreams-wd: 620px; 
-    --followDreams-fs: 40px;
-    --artCollectionOne-wd: 170px; 
-    --artCollectionOne-top: -18px; 
-    --artCollectionOne-left: 15px;
-    --artCollectionTwo-wd: 170px; 
-    --artCollectionTwo-top: 40%; 
-    --artCollectionTwo-left: 80%;
-    --contactUs-wd: 550px; 
-    --contactUs-fs: 16px;
-    --learnAboutFranchise-fs: 15px; 
-    --learnAboutFranchise-pd: 8px 16px; 
-    --learnAboutFranchise-mgTop: 30px;
-    
-    /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 300px 0 65px; 
-    --newspaperWrapper-wd: 90%; 
-    --newspaperWrapper-hg: 80vh; 
-    --newspaper-br: 3px;
-    --newspaperHeading-fs: 65px; 
-    --newspaperHeading-mg: 8px auto;
-    --latestNews-fs: 17px; 
-    --latestNews-pd: 7px 16px; 
-    --gazetteImgs-gap: 25px;
-    --gazetteDate-fs: 12px; 
-    --gazetteDate-top: 14px; 
-    --gazetteDate-left: 14px;
-    --gazetteOneDate-pd: 5px 14px; 
-    --gazetteTwoDate-pd: 5px 15px;
-    --gazetteImg-wd: 300px; 
-    --gazetteImg-br: 5px;
-    --gazetteCaption-wd: 300px; 
-    --gazetteCaption-fs: 12px; 
-    --gazetteCaption-mgTop: 6px;
-    }
-    .third-content {
-        height: 100px;
-    }
-    .fourth-content {
-        height: 55vh;
-    }
-    .cheddar-burger-img img {
-        object-position: 25% 50%;
-    }
-}
-@media (max-width: 768px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 180px;
-    --welcome-fs: 2.5rem;
-    --branches-wd: 300px;
-    --branches-hg: 30px;
-    --branches-fs: 14px;
-    --branches-pd: 0 16px;
-    --branchList-hg: 30px;
-    --researchBtn-fs: 16px;
-    --researchBtn-pd: 8px 18px;
-    --border-rd: 5px;
-    --intro-gap: 23px;
-    --researchBranches-gap: 8px;
-    
-    /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 200px;
-    --modelBurger-br: 8px;
-    --burgerOfTheDay-wd: 360px;
-    --infoContentPara-wd: 400px;
-    --recipe-fs: 14px;
-    --recipe-fw: 500;
-    --twoButtons-fs: 18px;
-    --twoButtons-pd: 8px 30px;
-    --twoButtons-gap: 10px;
-    
-        /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 160px; 
-    --storyTitle-fs: 4.75rem; 
-    --makeYourOrder-wd: 82%; 
-    --makeYourOrder-mgTop: -14px;
-    --storyContent-wd: 82%; 
-    --storyContent-fs: 14px; 
-    --storyContent-mgTop: 34px;
-    --learnMore-fs: 16px; 
-    --learnMore-mgTop: 30px; 
-    --learnMore-pd: 8px 16px;
-    
-    /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 200px;
-    --pinkBackground-hg: 620px;
-    --pinkBackground-pd: 200px 0 100px;
-    --pinkBackground-clip: path('M 0 0 Q 384 50, 768 0 L 768 620 Q 384 700, 0 620 Z');
-    --franchise-wd: 210px;
-    --franchise-top: -20px;
-    --followDreams-wd: 600px;
-    --followDreams-fs: 42px;
-    --artCollectionOne-wd: 160px;
-    --artCollectionOne-top: -60px;
-    --artCollectionOne-left: calc(100% - 220px);
-    --contactUs-wd: 560px;
-    --contactUs-fs: 17px;
-    --learnAboutFranchise-fs: 16px;
-    --learnAboutFranchise-pd: 9px 18px;
-    --learnAboutFranchise-mgTop: 28px;
-    
-    /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 300px 0 65px;
+    --seventhContent-mg: 60vh 0 15vh;
     --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 190vh;
-    --newspaper-br: 3px;
-    --newspaperHeading-fs: 70px;
-    --newspaperHeading-mg: 8px auto;
-    --latestNews-fs: 18px;
-    --latestNews-pd: 8px 30px;
-    --gazetteImgs-gap: 20px;
-    --gazetteImg-wd: 500px;
-    --gazetteImg-br: 5px;
-    --gazetteCaption-wd: 500px;
-    --gazetteCaption-fs: 15px; 
-    --gazetteCaption-mgTop: 6px;
-    --gazetteNews-gap: 5px;
-    --gazetteDate-fs: 15px; 
-    --gazetteDate-top: 20px; 
-    --gazetteDate-left: 15px;
-    --gazetteOneDate-pd: 5px 16px; 
-    --gazetteTwoDate-pd: 5px 16px;
+    --newspaperWrapper-hg: 230vw; 
+    --newspaper-br: 0.2em;
+    --newspaper-pd: 3vh 0;
+    --newspaperHeading-fs: clamp(2rem, 12.8vw, 3.5rem); 
+    --latestNews-fs: clamp(1.1rem, 7.04vw, 1.3rem); 
+    --latestNews-pd: 0.4em 1em; 
+    --gazetteImgs-gap: 2.5vh;
+    --gazetteDate-fs: clamp(0.8rem, 3vw, 1rem); 
+    --gazetteDate-top: 1em;
+    --gazetteDate-left: 1em;
+    --gazetteOneDate-pd: 0.4em 1em;
+    --gazetteTwoDate-pd: 0.4em 1em;
+    --gazetteImg-wd: 100%;
+    --gazetteImg-br: 0.2em;
+    --gazetteNews-gap: 0.5em;
+    --gazetteCaption-wd: 100%;
+    --gazetteCaption-fs: clamp(0.75rem, 4.8vw, 1rem);
     }
-    .left-img, .right-img, .second-content, .third-content {
-        display: none;
+}
+@media (min-width: 375px) {
+    :root {
+        /*Top Content CSS Responsive*/
+    --topcontent-mgTop: 28vh;
+    --welcome-wd: 85%;
+    --welcome-fs: clamp(3.5rem, 15.6vw, 4rem);
+    --branches-wd: 85vw;
+    --branches-hg: 2.4em;
+    --branches-fs: clamp(1.1rem, 4.5vw, 1.2rem);
+    --branches-pd: 0 1em;
+    --branchList-hg: 2em;
+    --researchBtn-fs: clamp(1rem, 5.5vw, 1.5rem);
+    --researchBtn-pd: 0.6em 1.5em;
+    --border-rd: 0.25em;
+    --intro-gap: 0.5em;
+    --researchBranches-gap: 2em;
+    
+    /*Fourth Content CSS Responsive*/
+    --fourthContent-mgTop: 30vh;
+    --fourthContent-hg: 165vw;
+    --modelBurger-wd: 80%;
+    --modelBurger-br: 0.8em;
+    --burgerOfTheDay-wd: 85%;
+    --infoContentPara-wd: 90%;
+    --recipe-fs: clamp(0.75rem, 3.5vw, 1rem);
+    --recipe-fw: 500;
+    --twoButtons-fs: clamp(1rem, 5vw, 1.2rem);
+    --twoButtons-pd: 0.4em 15vw;
+    --twoButtons-gap: 0.5em;
+    
+    /* Fifth Content CSS Responsive */
+    --fifthContent-mgTop: 30vh;
+    --storyTitle-fs: clamp(3.2rem, 14.5vw, 4.8rem); 
+    --makeYourOrder-wd: 90%;
+    --makeYourOrder-mgTop: -1.5vh;
+    --storyContent-wd: 85%;
+    --storyContent-fs: clamp(0.85rem, 3.5vw, 1.2rem);
+    --storyContent-mgTop: 3vh;
+    --learnMore-fs: clamp(1rem, 4.26vw, 1.25rem);
+    --learnMore-pd: 0.6em 1.8em;
+    --learnMore-mgTop: 4vh;
+    
+    /* Sixth Content CSS Responsive */
+    --sixthContent-mgTop: 35vh;
+    --pinkBackground-hg: 75vh;
+    --pinkBackground-pd: 13vh 0 0;
+    --pinkBackground-clip: shape(from 0vw 0vh, curve to 100vw 0vh with 50vw 7vh, line to 100vw 78vh, curve to 0vw 78vh with 50vw 75vh, close);
+    --franchise-wd: 30vh;
+    --franchise-top: -8vh;
+    --followDreams-wd: 90%;
+    --followDreams-fs: clamp(1.2rem, 6vw, 2rem);
+    --artCollectionOne-wd: 40%;
+    --artCollectionOne-top: 75%; 
+    --artCollectionOne-left: 30%;
+    --contactUs-wd: 90%;
+    --contactUs-fs: clamp(0.8rem, 3.5vw, 1rem);
+    --learnAboutFranchise-fs: clamp(1.05rem, 4.26vw, 1.25rem); 
+    --learnAboutFranchise-pd: 0.5em 1.5em; 
+    
+    /* Seventh Content CSS Responsive */
+    --seventhContent-mg: 60vh 0 15vh;
+    --newspaperWrapper-wd: 90%;
+    --newspaperWrapper-hg: 185vw; 
+    --newspaper-br: 0.2em;
+    --newspaper-pd: 4vh 0;
+    --newspaperHeading-fs: clamp(2.2rem, 11vw, 3.5rem); 
+    --latestNews-fs: clamp(1rem, 4.26vw, 1.25rem); 
+    --latestNews-pd: 0.5em 2em; 
+    --gazetteImgs-gap: 3vh;
+    --gazetteDate-fs: clamp(0.8rem, 3.2vw, 1rem); 
+    --gazetteDate-top: 1em;
+    --gazetteDate-left: 1em;
+    --gazetteOneDate-pd: 0.4em 1em;
+    --gazetteTwoDate-pd: 0.4em 1em;
+    --gazetteImg-wd: 100%;
+    --gazetteImg-br: 0.2em;
+    --gazetteNews-gap: 0.5em;
+    --gazetteCaption-wd: 100%;
+    --gazetteCaption-fs: clamp(0.75rem, 3.2vw, 0.95rem);
     }
-    .top-content {
-        justify-content: center;
+    .welcome {
+        line-height: 1;
+    }
+    .follow-dreams {
+        letter-spacing: 0;
+        line-height: normal;
     }
     .slider {
-        width: 100%;
         margin-top: 80px;
-        overflow: hidden;
-        display: block;
     }
-
-    .slider-track {
-        display: flex;
-        width: max-content;
-        animation: infinite-scroll 20s linear infinite;
+    .slider-track img {
+        width: 50vw;
+    }
+    .model-burger {
+        grid-template-rows: 45% 55%;
+        max-width: 34rem;
+    }
+    .recipe {
+        line-height: normal;
+    }
+    .story-content {
+        line-height: 1.4;
+    }
+    .contact-us {
+        line-height: normal;
+    }
+    .newspaper-wrapper {
+        max-height: 55rem;
+    }
+}
+@media (min-width: 500px) {
+    :root {
+        /*Top Content CSS Responsive*/
+    --topcontent-mgTop: 30vh;
+    --welcome-wd: 75%;
+    --welcome-fs: clamp(3rem, 9.6vw, 4.5rem);
+    --branches-wd: 80vw;
+    --branches-hg: 2.5em;
+    --branches-fs: clamp(1.05rem, 3.2vw, 1.45rem);
+    --branches-pd: 0 1em;
+    --branchList-hg: 2.1em;
+    --researchBtn-fs: clamp(1.5rem, 4.8vw, 2.2rem);
+    --researchBtn-pd: 0.5em 1em;
+    --border-rd: 0.25em;
+    --intro-gap: 0.5em;
+    --researchBranches-gap: 3em;
+    
+    /*Fourth Content CSS Responsive*/
+    --fourthContent-mgTop: 30vh;
+    --fourthContent-hg: 130vw;
+    --modelBurger-wd: 75%;
+    --modelBurger-br: 0.6em;
+    --burgerOfTheDay-wd: 75%;
+    --infoContentPara-wd: 90%;
+    --recipe-fs: clamp(0.8rem, 2.5vw, 1.2rem);
+    --recipe-fw: 500;
+    --twoButtons-fs: clamp(1rem, 3vw, 1.5rem);
+    --twoButtons-pd: 0.5em 4.5em;
+    --twoButtons-gap: 0.6em;
+    
+    /* Fifth Content CSS Responsive */
+    --fifthContent-mgTop: 25vh;
+    --storyTitle-fs: clamp(3.5rem, 12vw, 6.5rem); 
+    --makeYourOrder-wd: 85%; 
+    --makeYourOrder-mgTop: -3vh;    
+    --storyContent-wd: 80%;
+    --storyContent-fs: clamp(0.9rem, 2.8vw, 1.2rem);
+    --storyContent-mgTop: 5vh;
+    --learnMore-fs: clamp(1.2rem, 3.8vw, 1.65rem);
+    --learnMore-pd: 0.5em 1.5em;
+    --learnMore-mgTop: 5vh; 
+    
+    /* Sixth Content CSS Responsive */
+    --sixthContent-mgTop: 30vh;
+    --pinkBackground-hg: 90vh;
+    --pinkBackground-pd: 18vh 0 0;
+    --pinkBackground-clip: shape(from 0vw 0vh, curve to 100vw 0vh with 50vw 12vh, line to 100vw 92.5vh, curve to 0vw 92.5vh with 50vw 90vh, close);
+    --franchise-wd: 40vh;
+    --franchise-top: -8vh;
+    --followDreams-wd: 80%;
+    --followDreams-fs: clamp(1.95rem, 6.2vw, 3rem);
+    --artCollectionOne-wd: 28%;
+    --artCollectionOne-top: 90%; 
+    --artCollectionOne-left: 35%;
+    --contactUs-wd: 80%;
+    --contactUs-fs: clamp(1rem, 3.2vw, 1.45rem);
+    --learnAboutFranchise-fs: clamp(1.2rem, 3.8vw, 1.55rem); 
+    --learnAboutFranchise-pd: 0.5em 1.5em;
+    
+    /* Seventh Content CSS Responsive */
+    --seventhContent-mg: 70vh 0 15vh;
+    --newspaperWrapper-wd: 90%;
+    --newspaperWrapper-hg: 175vw; 
+    --newspaper-br: 0.35em;
+    --newspaper-pd: 5vh 0;
+    --newspaperHeading-fs: clamp(3.4rem, 11vw, 5rem); 
+    --latestNews-fs: clamp(1.25rem, 4vw, 1.5rem); 
+    --latestNews-pd: 0.45em 1.4em; 
+    --gazetteImgs-gap: 4vh;
+    --gazetteDate-fs: clamp(0.8rem, 1.8vw, 2rem); 
+    --gazetteDate-top: 1.10em;
+    --gazetteDate-left: 1.10em;
+    --gazetteOneDate-pd: 0.4em 1.2em;
+    --gazetteTwoDate-pd: 0.4em 1.2em;
+    --gazetteImg-wd: 100%;
+    --gazetteImg-br: 0.3em;
+    --gazetteNews-gap: 0.5em;
+    --gazetteCaption-wd: 100%;
+    --gazetteCaption-fs: clamp(1rem, 3.2vw, 1.2rem);
+    }
+    .welcome {
+        line-height: normal;
+    }
+    .pink-background {
+        justify-content: start;
+        gap: 2em;
+    }
+    .slider {
+        margin-top: 80px;
     }
 
     .slider-track img {
-        width: 220px;
-        object-fit: cover;
-        flex-shrink: 0;
-        margin-right: 20px;
-    }
-
-    @keyframes infinite-scroll {
-        from {
-            transform: translateX(0);
-        }
-
-        to {
-            transform: translateX(-50%);
-        }
-    }
-    
-    .fourth-content {
-        height: 120vh;
+        width: 42vw;
     }
     .model-burger {
-        width: 70%;
         grid-template-rows: 50% 50%;
-        grid-template-columns: 100%;
     }
-    .two-buttons {
-        flex-direction: column;
-    }
-    .art-collection-two {
-        display: none;
+    .newspaper-wrapper {
+        max-height: 80rem;
     }
     .gazette-imgs {
+        width: 90%;
         flex-direction: column;
+        align-items: center;
+        gap: var(--gazetteImgs-gap);
     }
     .gazette-one, .gazette-two {
         display: flex;
@@ -2088,767 +1145,295 @@ body {
         align-items: flex-end;
         gap: var(--gazetteNews-gap);
     }
-    
 }
-@media (max-width: 700px) {
+@media (min-width: 800px) {
     :root {
         /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 180px;
-    --welcome-fs: 2.279rem;
-    --branches-wd: 300px;
-    --branches-hg: 35px;
-    --branches-fs: 14.5px;
-    --branches-pd: 0px 14.58px;
-    --branchList-hg: 27.34px;
-    --researchBtn-fs: 14.58px;
-    --researchBtn-pd: 7.29px 16.41px;
-    --border-rd: 4.56px;
-    --intro-gap: 20.96px;
-    --researchBranches-gap: 7.29px;
+    --topcontent-mgTop: 35vh;
+    --welcome-wd: 100%;
+    --welcome-fs: clamp(1.2rem, 2.6vw, 2rem);
+    --branches-wd: 20em;
+    --branches-hg: 2.2em;
+    --branches-fs: clamp(0.8rem, 1.4vw, 2rem);
+    --branches-pd: 0 1em;
+    --branchList-hg: 1.8em;
+    --researchBtn-fs: clamp(1rem, 1.6vw, 2.4rem);
+    --researchBtn-pd: 0.4em 1.4em;
+    --border-rd: 0.25em;
+    --intro-gap: 1.5em;
+    --researchBranches-gap: 0.6em;
     
-        /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 182.29px;
-    --modelBurger-br: 7.29px;
-    --burgerOfTheDay-wd: 328.12px;
-    --infoContentPara-wd: 364.58px;
-    --recipe-fs: 12.76px;
-    --recipe-fw: 500;
-    --twoButtons-fs: 16.41px;
-    --twoButtons-pd: 7.29px 27.34px;
-    --twoButtons-gap: 9.11px;
-    
-        /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 150px; 
-    --storyTitle-fs: 4.4rem; 
-    --makeYourOrder-wd: 84%;
-    --makeYourOrder-mgTop: -12px;
-    --storyContent-wd: 84%; 
-    --storyContent-fs: 14px; 
-    --storyContent-mgTop: 32px;
-    --learnMore-fs: 15px; 
-    --learnMore-mgTop: 28px; 
-    --learnMore-pd: 8px 15px;
-    
-    /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 200px;
-    --pinkBackground-hg: 500px;
-    --pinkBackground-pd: 140px 0 80px;
-    --pinkBackground-clip: path('M 0 0 Q 384 50, 768 0 L 768 620 Q 384 700, 0 620 Z');
-    --franchise-wd: 200px;
-    --franchise-top: -20px;
-    --followDreams-wd: 600px;
-    --followDreams-fs: 42px;
-    --artCollectionOne-wd: 140px;
-    --artCollectionOne-top: -80px;
-    --artCollectionOne-left: calc(100% - 180px);
-    --contactUs-wd: 560px;
-    --contactUs-fs: 17px;
-    --learnAboutFranchise-fs: 16px;
-    --learnAboutFranchise-pd: 9px 18px;
-    --learnAboutFranchise-mgTop: 28px;
-    
-        /*Seventh Content CSS Responsive*/
-    --seventhContent-mg: 273.44px 0px 59.24px;
-    --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 175vh;
-    --newspaper-br: 2.73px;
-    --newspaperHeading-fs: 63.8px;
-    --newspaperHeading-mg: 7.29px auto;
-    --latestNews-fs: 16.41px;
-    --latestNews-pd: 7.29px 27.34px;
-    --gazetteImgs-gap: 18.23px;
-    --gazetteImg-wd: 455.73px;
-    --gazetteImg-br: 4.56px;
-    --gazetteCaption-wd: 455.73px;
-    --gazetteCaption-fs: 13.67px;
-    --gazetteCaption-mgTop: 5.47px;
-    --gazetteNews-gap: 4.56px;
-    --gazetteDate-fs: 13.67px;
-    --gazetteDate-top: 18.23px;
-    --gazetteDate-left: 13.67px;
-    --gazetteOneDate-pd: 4.56px 14.58px;
-    --gazetteTwoDate-pd: 4.56px 14.58px;
-    }
-    .slider {
-        margin-top: 72.92px;
-    }
-    .slider-track img {
-        width: 200.52px;
-        margin-right: 18.23px;
-    }
-    .fourth-content {
-        height: 115vh;
-    }
-    .model-burger {
-        width: 65%;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 100%;
-    }
-    .two-buttons {
-        flex-direction: column;
-    }
-    .gazette-imgs {
-        flex-direction: column;
-    }
-    .gazette-one, .gazette-two {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-}
-@media (max-width: 650px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 180px;
-    --welcome-fs: 2.116rem;
-    --branches-wd: 285px;
-    --branches-hg: 32px;
-    --branches-fs: 13.5px;
-    --branches-pd: 0px 13px;
-    --branchList-hg: 25.39px;
-    --researchBtn-fs: 13.54px;
-    --researchBtn-pd: 6.77px 15.23px;
-    --border-rd: 4.23px;
-    --intro-gap: 19.47px;
-    --researchBranches-gap: 6.77px;
+    --leftImg-wd: 24%;
+    --leftImgAft-wd: 70%;
+    --leftImgAft-right: -3.5vw;
+    --leftImgAft-btm: -11.5vh;
 
-        /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 169.27px;
-    --modelBurger-br: 6.77px;
-    --burgerOfTheDay-wd: 304.69px;
-    --infoContentPara-wd: 338.54px;
-    --recipe-fs: 11.85px;
-    --recipe-fw: 500;
-    --twoButtons-fs: 15.23px;
-    --twoButtons-pd: 6.77px 25.39px;
-    --twoButtons-gap: 8.46px;
+    --rightImg-wd: 23%;
+    --rightImgAft-wd: 42%;
+    --rightImgAft-left: 1.4vw;
+    --rightImgAft-btm: -6vh;
 
-        /*Seventh Content CSS Responsive*/
-    --seventhContent-mg: 253.91px 0px 55.01px;
-    --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 160vh;
-    --newspaper-br: 2.54px;
-    --newspaperHeading-fs: 59.24px;
-    --newspaperHeading-mg: 6.77px auto;
-    --latestNews-fs: 15.23px;
-    --latestNews-pd: 6.77px 25.39px;
-    --gazetteImgs-gap: 16.93px;
-    --gazetteImg-wd: 423.18px;
-    --gazetteImg-br: 4.23px;
-    --gazetteCaption-wd: 423.18px;
-    --gazetteCaption-fs: 12.7px;
-    --gazetteCaption-mgTop: 5.08px;
-    --gazetteNews-gap: 4.23px;
-    --gazetteDate-fs: 12.7px;
-    --gazetteDate-top: 16.93px;
-    --gazetteDate-left: 12.7px;
-    --gazetteOneDate-pd: 4.23px 13.54px;
-    --gazetteTwoDate-pd: 4.23px 13.54px;
-    }
-    .slider {
-        margin-top: 67.71px;
-    }
-    .slider-track img {
-        width: 186.2px;
-        margin-right: 16.93px;
-    }
-    .fourth-content {
-        height: 110vh;
-    }
-    .model-burger {
-        width: 70%;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 100%;
-    }
-    .two-buttons {
-        flex-direction: column;
-    }
-    .gazette-imgs {
-        flex-direction: column;
-    }
-    .gazette-one, .gazette-two {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-}
-@media (max-width: 600px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 160px;
-    --welcome-fs: 1.953rem;
-    --branches-wd: 265px;
-    --branches-hg: 30px;
-    --branches-fs: 12px;
-    --branches-pd: 0px 12.5px;
-    --branchList-hg: 23.44px;
-    --researchBtn-fs: 12.5px;
-    --researchBtn-pd: 6.25px 14.06px;
-    --border-rd: 3.91px;
-    --intro-gap: 17.97px;
-    --researchBranches-gap: 6.25px;
+        /*Second Content CSS Responsive*/
+    --secondContent-mgTop: -6vh;
+    --secondContent-wd: 45%;
 
-    /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 156.25px;
-    --modelBurger-br: 6.25px;
-    --burgerOfTheDay-wd: 281.25px;
-    --infoContentPara-wd: 312.5px;
-    --recipe-fs: 10.94px;
-    --recipe-fw: 500;
-    --twoButtons-fs: 14.06px;
-    --twoButtons-pd: 6.25px 23.44px;
-    --twoButtons-gap: 7.81px;
+    --creativeLogo-wd: 23%;
     
-        /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 140px; 
-    --storyTitle-fs: 4rem; 
-    --makeYourOrder-wd: 86%; 
-    --makeYourOrder-mgTop: -10px;
-    --storyContent-wd: 86%; 
-    --storyContent-fs: 13.5px; 
-    --storyContent-mgTop: 30px;
-    --learnMore-fs: 15px; 
-    --learnMore-mgTop: 26px; 
-    --learnMore-pd: 7px 14px;
+    --twoBurgers-wd: 35%;
+    --twoBurgers-Top: 6vh;
+    --twoBurgersAft-wdnhg: 45%;
+    --twoBurgersAft-btm: 10vh;
+    --twoBurgersAft-left: -3.5vw;
+    --twoBurgersBef-wdnhg: 57%;
+    --twoBurgersBef-btm: -12.8vh;
+    --twoBurgersBef-right: -7.2vw;
+    --theLine-wd: 178%;
+    --theLine-top: 34vh;
+    --theLine-left: 20vw;
     
-    /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 200px;
-    --pinkBackground-hg: 500px;
-    --pinkBackground-pd: 140px 0 80px;
-    --pinkBackground-clip: path('M 0 0 Q 384 50, 768 0 L 768 620 Q 384 700, 0 620 Z');
-    --franchise-wd: 200px;
-    --franchise-top: -20px;
-    --followDreams-wd: 500px;
-    --followDreams-fs: 38px;
-    --artCollectionOne-wd: 120px;
-    --artCollectionOne-top: -60px;
-    --artCollectionOne-left: calc(100% - 120px);
-    --contactUs-wd: 440px;
-    --contactUs-fs: 15px;
-    --learnAboutFranchise-fs: 16px;
-    --learnAboutFranchise-pd: 9px 18px;
-    --learnAboutFranchise-mgTop: 28px;
-    
-    /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 234.38px 0px 50.78px;
-    --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 145vh;
-    --newspaper-br: 2.34px;
-    --newspaperHeading-fs: 54.69px;
-    --newspaperHeading-mg: 6.25px auto;
-    --latestNews-fs: 14.06px;
-    --latestNews-pd: 6.25px 23.44px;
-    --gazetteImgs-gap: 15.62px;
-    --gazetteImg-wd: 390.62px;
-    --gazetteImg-br: 3.91px;
-    --gazetteCaption-wd: 390.62px;
-    --gazetteCaption-fs: 11.72px;
-    --gazetteCaption-mgTop: 4.69px;
-    --gazetteNews-gap: 3.91px;
-    --gazetteDate-fs: 11.72px;
-    --gazetteDate-top: 15.62px;
-    --gazetteDate-left: 11.72px;
-    --gazetteOneDate-pd: 3.91px 12.5px;
-    --gazetteTwoDate-pd: 3.91px 12.5px;
-    }
-    .slider {
-        margin-top: 62.5px;
-    }
-    .slider-track img {
-        width: 171.88px;
-        margin-right: 15.62px;
-    }
-    .fourth-content {
-        height: 100vh;
-    }
-    .model-burger {
-        width: 70%;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 100%;
-    }
-    .two-buttons {
-        flex-direction: column;
-    }
-    .gazette-imgs {
-        flex-direction: column;
-    }
-    .gazette-one, .gazette-two {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-}
-@media (max-width: 550px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 150px;
-    --welcome-fs: 1.79rem;
-    --branches-wd: 250px;
-    --branches-hg: 28px;
-    --branches-fs: 12px;
-    --branches-pd: 0px 11.46px;
-    --branchList-hg: 21.48px;
-    --researchBtn-fs: 11.46px;
-    --researchBtn-pd: 5.73px 12.89px;
-    --border-rd: 3.58px;
-    --intro-gap: 16.47px;
-    --researchBranches-gap: 5.73px;
+    /*Third Content CSS Responsive*/
+    --thirdContent-wd: 62%;
+    --thirdContent-mgTop: -9vh;
 
-        /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 143.23px;
-    --modelBurger-br: 5.73px;
-    --burgerOfTheDay-wd: 257.81px;
-    --infoContentPara-wd: 286.46px;
-    --recipe-fs: 10.03px;
-    --recipe-fw: 500;
-    --twoButtons-fs: 12.89px;
-    --twoButtons-pd: 5.73px 21.48px;
-    --twoButtons-gap: 7.16px;
+    --withFries-wd: 25%;
 
-        /*Seventh Content CSS Responsive*/
-    --seventhContent-mg: 214.84px 0px 46.55px;
-    --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 135vh;
-    --newspaper-br: 2.15px;
-    --newspaperHeading-fs: 50.13px;
-    --newspaperHeading-mg: 5.73px auto;
-    --latestNews-fs: 12.89px;
-    --latestNews-pd: 5.73px 21.48px;
-    --gazetteImgs-gap: 14.32px;
-    --gazetteImg-wd: 358.07px;
-    --gazetteImg-br: 3.58px;
-    --gazetteCaption-wd: 358.07px;
-    --gazetteCaption-fs: 10.74px;
-    --gazetteCaption-mgTop: 4.3px;
-    --gazetteNews-gap: 3.58px;
-    --gazetteDate-fs: 10.74px;
-    --gazetteDate-top: 14.32px;
-    --gazetteDate-left: 10.74px;
-    --gazetteOneDate-pd: 3.58px 11.46px;
-    --gazetteTwoDate-pd: 3.58px 11.46px;
-    }
-    /* Additional 768px layout rules scaled for this breakpoint */
-    .slider {
-        margin-top: 57.29px;
-    }
-    .slider-track img {
-        width: 157.55px;
-        margin-right: 14.32px;
-    }
-    .fourth-content {
-        height: 90vh;
-    }
-    .model-burger {
-        width: 70%;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 100%;
-    }
-    .two-buttons {
-        flex-direction: column;
-    }
-    .gazette-imgs {
-        flex-direction: column;
-    }
-    .gazette-one, .gazette-two {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-}
-@media (max-width: 500px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 140px;
-    --welcome-fs: 1.628rem;
-    --branches-wd: 280px;
-    --branches-hg: 38px;
-    --branches-fs: 14px;
-    --branches-pd: 0px 10.42px;
-    --branchList-hg: 19.53px;
-    --researchBtn-fs: 18px;
-    --researchBtn-pd: 6px 12px;
-    --border-rd: 3.26px;
-    --intro-gap: 14.97px;
-    --researchBranches-gap: 5.21px;
+    --wholeMeal-wd: 50%;
+    --wholeMeal-top: 25vh;
+    --wholeMealBef-wdnhg: 38%;
+    --wholeMealBef-btm: 19vh;
+    --wholeMealBef-left: -5vw;
     
     /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 130.21px;
-    --modelBurger-br: 5.21px;
-    --burgerOfTheDay-wd: 234.38px;
-    --infoContentPara-wd: 260.42px;
-    --recipe-fs: 9.11px;
+    --fourthContent-mgTop: 25vh;
+    --fourthContent-hg: clamp(20rem, 35vw,25rem);
+    --modelBurger-wd: 80%;
+    --modelBurger-br: 0.4em;
+    --burgerOfTheDay-wd: 70%;
+    --infoContentPara-wd: 80%;
+    --recipe-fs: clamp(0.68rem, 1.25vw, 2rem);
     --recipe-fw: 500;
-    --twoButtons-fs: 11.72px;
-    --twoButtons-pd: 5.21px 19.53px;
-    --twoButtons-gap: 6.51px;
+    --twoButtons-fs: clamp(0.8rem, 1.50vw, 2rem);
+    --twoButtons-pd: 0.5em 1.15em;
+    --twoButtons-gap: 0.5em;
     
-        /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 130px; 
-    --storyTitle-fs: 3.75rem; 
-    --makeYourOrder-wd: 88%; 
-    --makeYourOrder-mgTop: -8px;
-    --storyContent-wd: 88%; 
-    --storyContent-fs: 12px; 
-    --storyContent-mgTop: 28px;
-    --learnMore-fs: 14px; 
-    --learnMore-mgTop: 24px; 
-    --learnMore-pd: 7px 13px;
-    
-    /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 200px;
-    --pinkBackground-hg: 480px;
-    --pinkBackground-pd: 140px 0 90px;
-    --pinkBackground-clip: path('M 0 0 Q 384 50, 768 0 L 768 620 Q 384 700, 0 620 Z');
-    --franchise-wd: 160px;
-    --franchise-top: -20px;
-    --followDreams-wd: 410px;
-    --followDreams-fs: 32px;
-    --artCollectionOne-wd: 120px;
-    --artCollectionOne-top: -60px;
-    --artCollectionOne-left: calc(100% - 100px);
-    --contactUs-wd: 380px;
-    --contactUs-fs: 14px;
-    --learnAboutFranchise-fs: 16px;
-    --learnAboutFranchise-pd: 9px 18px;
-    --learnAboutFranchise-mgTop: 28px;
-    
-        /*Seventh Content CSS Responsive*/
-    --seventhContent-mg: 195.31px 0px 42.32px;
-    --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 120vh;
-    --newspaper-br: 1.95px;
-    --newspaperHeading-fs: 45.57px;
-    --newspaperHeading-mg: 5.21px auto;
-    --latestNews-fs: 11.72px;
-    --latestNews-pd: 5.21px 19.53px;
-    --gazetteImgs-gap: 13.02px;
-    --gazetteImg-wd: 325.52px;
-    --gazetteImg-br: 3.26px;
-    --gazetteCaption-wd: 325.52px;
-    --gazetteCaption-fs: 9.77px;
-    --gazetteCaption-mgTop: 3.91px;
-    --gazetteNews-gap: 3.26px;
-    --gazetteDate-fs: 9.77px;
-    --gazetteDate-top: 13.02px;
-    --gazetteDate-left: 9.77px;
-    --gazetteOneDate-pd: 3.26px 10.42px;
-    --gazetteTwoDate-pd: 3.26px 10.42px;
-    }
-    .slider {
-        margin-top: 52.08px;
-    }
-    .slider-track img {
-        width: 143.23px;
-        margin-right: 13.02px;
-    }
-    .fourth-content {
-        height: 85vh;
-    }
-    .model-burger {
-        width: 70%;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 100%;
-    }
-    .two-buttons {
-        flex-direction: column;
-    }
-    .gazette-imgs {
-        flex-direction: column;
-    }
-    .gazette-one, .gazette-two {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-}
-
-@media (max-width: 425px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 120px;
-    --welcome-fs: 1.383rem;
-    --branches-wd: 260px;
-    --branches-hg: 34px;
-    --branches-fs: 12px;
-    --branches-pd: 0px 10px;
-    --branchList-hg: 16.6px;
-    --researchBtn-fs: 15px;
-    --researchBtn-pd: 6px 12px;
-    --border-rd: 2.77px;
-    --intro-gap: 12.73px;
-    --researchBranches-gap: 4.43px;
-    
-    /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 110.68px;
-    --modelBurger-br: 4.43px;
-    --burgerOfTheDay-wd: 199.22px;
-    --infoContentPara-wd: 221.35px;
-    --recipe-fs: 7.75px;
-    --recipe-fw: 500;
-    --twoButtons-fs: 9.96px;
-    --twoButtons-pd: 4.43px 16.6px;
-    --twoButtons-gap: 5.53px;
-
     /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 120px; 
-    --storyTitle-fs: 3.4rem; 
-    --makeYourOrder-wd: 90%; 
-    --makeYourOrder-mgTop: -7px;
-    --storyContent-wd: 90%; 
-    --storyContent-fs: 12.5px; 
-    --storyContent-mgTop: 26px;
-    --learnMore-fs: 13px; 
-    --learnMore-mgTop: 22px; 
-    --learnMore-pd: 7px 12px;
+    --fifthContent-mgTop: 20vh;
+    --storyTitle-fs: clamp(5rem, 11vw, 7.5rem); 
+    --makeYourOrder-wd: 70%; 
+    --makeYourOrder-mgTop: -4vh;    
+    --storyContent-wd: 68%;
+    --storyContent-fs: clamp(0.8rem, 1.7vw, 1.1rem);
+    --storyContent-mgTop: 3vh;
+    --learnMore-fs: clamp(0.8rem, 1.7vw, 1.1rem);
+    --learnMore-pd: 0.5em 1.5em;
+    --learnMore-mgTop: 3vh; 
     
     /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 200px;
-    --pinkBackground-hg: 420px;
-    --pinkBackground-pd: 120px 0 50px;
-    --pinkBackground-clip: path('M 0 0 Q 384 50, 768 0 L 768 620 Q 384 700, 0 620 Z');
-    --franchise-wd: 160px;
-    --franchise-top: -20px;
-    --followDreams-wd: 380px;
-    --followDreams-fs: 26px;
-    --artCollectionOne-wd: 100px;
-    --artCollectionOne-top: -60px;
-    --artCollectionOne-left: calc(100% - 90px);
-    --contactUs-wd: 350px;
-    --contactUs-fs: 14px;
-    --learnAboutFranchise-fs: 14px;
-    --learnAboutFranchise-pd: 9px 18px;
-    --learnAboutFranchise-mgTop: 28px;
+    --sixthContent-mgTop: 30vh;
+    --pinkBackground-hg: 75vh;
+    --pinkBackground-pd: 18vh 0 12vh;
+    --pinkBackground-clip: shape(from 0vw 0vh, curve to 100vw 0vh with 50vw 8.5vh, line to 100vw 78vh, curve to 0vw 78vh with 50vw 100vh, close);
+    --franchise-wd: 19.5%; 
+    --franchise-top: -6vh;
+    --followDreams-wd: 60%; 
+    --followDreams-fs: clamp(2rem, 3.8vw, 4rem);
+    --artCollectionOne-wd: 18%; 
+    --artCollectionOne-top: -12vh; 
+    --artCollectionOne-left: 0vw;
+    --artCollectionTwo-wd: 18%; 
+    --artCollectionTwo-top: 30vh; 
+    --artCollectionTwo-left: 81vw;
+    --contactUs-wd: 55%; 
+    --contactUs-fs: clamp(1rem, 1.4vw, 2rem);
+    --learnAboutFranchise-fs: clamp(0.8rem, 1.8vw, 1rem); 
+    --learnAboutFranchise-pd: 0.55em 1.8em; 
     
     /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 166.02px 0px 35.97px;
-    --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 105vh;
-    --newspaper-br: 1.66px;
-    --newspaperHeading-fs: 38.74px;
-    --newspaperHeading-mg: 4.43px auto;
-    --latestNews-fs: 9.96px;
-    --latestNews-pd: 4.43px 16.6px;
-    --gazetteImgs-gap: 11.07px;
-    --gazetteImg-wd: 276.69px;
-    --gazetteImg-br: 2.77px;
-    --gazetteCaption-wd: 276.69px;
-    --gazetteCaption-fs: 8.3px;
-    --gazetteCaption-mgTop: 3.32px;
-    --gazetteNews-gap: 2.77px;
-    --gazetteDate-fs: 8.3px;
-    --gazetteDate-top: 11.07px;
-    --gazetteDate-left: 8.3px;
-    --gazetteOneDate-pd: 2.77px 8.85px;
-    --gazetteTwoDate-pd: 2.77px 8.85px;
+    --seventhContent-mg: 50vh 0 20vh; 
+    --newspaperWrapper-wd: 90%; 
+    --newspaperWrapper-hg: 72vw; 
+    --newspaper-br: 0.35em;
+    --newspaper-pd: 8vh 0;
+    --newspaperHeading-fs: clamp(4.5rem, 9vw, 6rem); 
+    --latestNews-fs: clamp(1.1rem, 2.2vw, 1.3rem); 
+    --latestNews-pd: 0.5em 1.4em; 
+    --gazetteImgs-gap: 2vw;
+    --gazetteDate-fs: clamp(0.8rem, 1.3vw, 3rem); 
+    --gazetteDate-top: 1.10em; 
+    --gazetteDate-left: 1.10em;
+    --gazetteOneDate-pd: 0.4em 1em;
+    --gazetteTwoDate-pd: 0.4em 1em;
+    --gazetteImg-wd: 60%;
+    --gazetteImg-br: 0.3em;
+    --gazetteCaption-wd: 100%; 
+    --gazetteCaption-fs: clamp(0.8rem, 1.25vw, 4rem);
+    }
+    .left-img, .right-img, .second-content, .third-content {
+        display: flex;
+    }
+    .pink-background {
+        max-height: none;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .follow-dreams {
+        text-shadow: -2px -2px 3px rgb(0, 0, 0), 2px 2px 3px rgba(0, 0, 0, 0.425);
+    }
+    .art-collection-two {
+        display: block;
+    }
+    .top-content {
+        justify-content: space-between;
     }
     .slider {
-        margin-top: 44.27px;
+        display: none;
     }
-    .slider-track img {
-        width: 121.74px;
-        margin-right: 11.07px;
-    }
-    .fourth-content {
-        height: 80vh;
+
+    .slider-track {
+        display: none;
     }
     .model-burger {
-        width: 70%;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+        grid-template-columns: 50% 50%;
+        max-width: none;
     }
     .two-buttons {
-        flex-direction: column;
+        flex-direction: row;
+    }
+    .newspaper-wrapper {
+        max-height: 44rem;
+    }
+    .newspaper-heading {
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.406);
     }
     .gazette-imgs {
-        flex-direction: column;
-    }
-    .gazette-one, .gazette-two {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+        width: 85%;
+        flex-direction: row;
+        align-items:stretch;
     }
 }
-
-@media (max-width: 375px) {
+@media (min-width: 1200px) {
     :root {
         /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 120px;
-    --welcome-fs: 1.221rem;
-    --branches-wd: 230px;
-    --branches-hg: 30px;
-    --branches-fs: 11px;
-    --branches-pd: 0px 9px;
-    --branchList-hg: 14.65px;
-    --researchBtn-fs: 13px;
-    --researchBtn-pd: 6px 10px;
-    --border-rd: 2.44px;
-    --intro-gap: 11.23px;
-    --researchBranches-gap: 3.91px;
+    --topcontent-mgTop: 35vh;
+    --welcome-fs: clamp(2rem, 3vw, 6rem);
+    --branches-wd: 21em;
+    --branches-hg: 2.5em;
+    --branches-fs: clamp(0.8rem, 1.15vw, 4.3rem);
+    --branches-pd: 0 1em;
+    --branchList-hg: 1.9em;
+    --researchBtn-fs: clamp(0.8rem, 1.25vw, 4.4rem);
+    --researchBtn-pd: 0.6em 1.1em;
+    --border-rd: 0.25em;
+    --intro-gap: 2.5em;
+    --researchBranches-gap: 1em;
+    
+    --leftImg-wd: 20%;
+    --leftImgAft-wd: 70%;
+    --leftImgAft-right: -3.5vw;
+    --leftImgAft-btm: -20.5vh;
 
+    --rightImg-wd: 19%;
+    --rightImgAft-wd: 42%;
+    --rightImgAft-left: 1.4vw;
+    --rightImgAft-btm: -10vh;
+
+        /*Second Content CSS Responsive*/
+    --secondContent-mgTop: -10vh; 
+    --secondContent-wd: 45%;
+
+    --creativeLogo-wd: 25%;
+    
+    --twoBurgers-wd: 40%;
+    --twoBurgers-Top: 12vh;
+    --twoBurgersAft-wdnhg: 50%;
+    --twoBurgersAft-btm: 16vh;
+    --twoBurgersAft-left: -6vw;
+    --twoBurgersBef-wdnhg: 60%;
+    --twoBurgersBef-btm: -23.5vh;
+    --twoBurgersBef-right: -8.8vw;
+    --theLine-wd: 130%;
+    --theLine-top: 45.8vh;
+    --theLine-left: 25.2vw;
+    
+    /*Third Content CSS Responsive*/
+    --thirdContent-wd: 65%;
+    --thirdContent-mgTop: -12vh;
+
+    --withFries-wd: 28%;
+
+    --wholeMeal-wd: 54%;
+    --wholeMeal-top: 40vh;
+    --wholeMealBef-wdnhg: 42%;
+    --wholeMealBef-btm: 31vh;
+    --wholeMealBef-left: -6vw;
+    
     /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 97.66px;
-    --modelBurger-br: 3.91px;
-    --burgerOfTheDay-wd: 180px;
-    --infoContentPara-wd: 190px;
-    --recipe-fs: 7px;
+    --fourthContent-mgTop: 34vh;
+    --fourthContent-hg: 65vh;
+    --modelBurger-wd: 85%;
+    --modelBurger-br: 0.5em;
+    --burgerOfTheDay-wd: 70%;
+    --infoContentPara-wd: 80%;
+    --recipe-fs: clamp(0.8rem, 1.32vw, 4rem);
     --recipe-fw: 500;
-    --twoButtons-fs: 9px;
-    --twoButtons-pd: 4px 18px;
-    --twoButtons-gap: 4.88px;
-
+    --twoButtons-fs: clamp(1rem, 1.45vw, 4rem);
+    --twoButtons-pd: 0.5em 1.25em;
+    --twoButtons-gap: 1em;
+    
     /* Fifth Content CSS Responsive */
-    --fifthContent-mgTop: 110px; 
-    --storyTitle-fs: 3rem; 
-    --makeYourOrder-wd: 92%; 
-    --makeYourOrder-mgTop: -6px;
-    --storyContent-wd: 90%; 
-    --storyContent-fs: 12px; 
-    --storyContent-mgTop: 24px;
-    --learnMore-fs: 12.5px; 
-    --learnMore-mgTop: 20px; 
-    --learnMore-pd: 6px 11px;
+    --fifthContent-mgTop: 30vh;
+    --storyTitle-fs: clamp(6.25rem, 10vw, 20rem); 
+    --makeYourOrder-wd: 70%; 
+    --makeYourOrder-mgTop: -6vh;
+    --storyContent-wd: 65%;
+    --storyContent-fs: clamp(1rem, 1.2vw, 4rem);
+    --storyContent-mgTop: 4vh;
+    --learnMore-fs: clamp(1rem, 1.35vw, 4.5rem);
+    --learnMore-pd: 0.6em 1.6em;
+    --learnMore-mgTop: 4vh; 
     
     /* Sixth Content CSS Responsive */
-    --sixthContent-mgTop: 200px;
-    --pinkBackground-hg: 350px;
-    --pinkBackground-pd: 100px 0 40px;
-    --pinkBackground-clip: path('M 0 0 Q 384 50, 768 0 L 768 620 Q 384 700, 0 620 Z');
-    --franchise-wd: 160px;
-    --franchise-top: -20px;
-    --followDreams-wd: 300px;
-    --followDreams-fs: 22px;
-    --artCollectionOne-wd: 90px;
-    --artCollectionOne-top: -60px;
-    --artCollectionOne-left: calc(100% - 70px);
-    --contactUs-wd: 280px;
-    --contactUs-fs: 12px;
-    --learnAboutFranchise-fs: 12px;
-    --learnAboutFranchise-pd: 8px 16px;
-    --learnAboutFranchise-mgTop: 28px;
+    --sixthContent-mgTop: 35vh;
+    --pinkBackground-hg: 80vh;
+    --pinkBackground-pd: 20vh 0 15vh;
+    --pinkBackground-clip: shape(from 0vw 0vh, curve to 100vw 0vh with 50vw 7.17vh, line to 100vw 85.52vh, curve to 0vw 85.52vh with 50vw 100vh, close);
+    --franchise-wd: 17%; 
+    --franchise-top: -6vh;
+    --followDreams-wd: 60%; 
+    --followDreams-fs: clamp(2.3rem, 3.4vw, 8rem);
+    --artCollectionOne-wd: 18%; 
+    --artCollectionOne-top: -12vh; 
+    --artCollectionOne-left: 1vw;
+    --artCollectionTwo-wd: 18%; 
+    --artCollectionTwo-top: 30vh; 
+    --artCollectionTwo-left: 81vw;
+    --contactUs-wd: 50%; 
+    --contactUs-fs: clamp(0.8rem, 1.6vw, 5rem);
+    --learnAboutFranchise-fs: clamp(1rem, 1.35vw, 4.5rem); 
+    --learnAboutFranchise-pd: 0.6em 1.6em; 
     
     /* Seventh Content CSS Responsive */
-    --seventhContent-mg: 146.48px 0px 31.74px;
-    --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 92vh;
-    --newspaper-br: 1.46px;
-    --newspaperHeading-fs: 34.18px;
-    --newspaperHeading-mg: 3.91px auto;
-    --latestNews-fs: 8.79px;
-    --latestNews-pd: 3.91px 14.65px;
-    --gazetteImgs-gap: 9.77px;
-    --gazetteImg-wd: 244.14px;
-    --gazetteImg-br: 2.44px;
-    --gazetteCaption-wd: 244.14px;
-    --gazetteCaption-fs: 7.32px;
-    --gazetteCaption-mgTop: 2.93px;
-    --gazetteNews-gap: 2.44px;
-    --gazetteDate-fs: 7.32px;
-    --gazetteDate-top: 9.77px;
-    --gazetteDate-left: 7.32px;
-    --gazetteOneDate-pd: 2.44px 7.81px;
-    --gazetteTwoDate-pd: 2.44px 7.81px;
+    --seventhContent-mg: 50vh 0 20vh; 
+    --newspaperWrapper-wd: 90%; 
+    --newspaperWrapper-hg: 105vh; 
+    --newspaper-br: 0.35em;
+    --newspaper-pd: 8vh 0;
+    --newspaperHeading-fs: clamp(5rem, 7vw, 14rem); 
+    --latestNews-fs: clamp(1rem, 1.4vw, 5rem); 
+    --latestNews-pd: 0.5em 1.4em; 
+    --gazetteImgs-gap: 2vw;
+    --gazetteDate-fs: clamp(0.8rem, 1.3vw, 3rem); 
+    --gazetteDate-top: 1.10em; 
+    --gazetteDate-left: 1.10em;
+    --gazetteOneDate-pd: 0.4em 1em;
+    --gazetteTwoDate-pd: 0.4em 1em;
+    --gazetteImg-wd: 48%;
+    --gazetteImg-br: 0.5em;
+    --gazetteCaption-wd: 100%; 
+    --gazetteCaption-fs: clamp(0.8rem, 1.25vw, 4rem);
     }
-    .slider {
-        margin-top: 39.06px;
-    }
-    .slider-track img {
-        width: 107.42px;
-        margin-right: 9.77px;
-    }
-    .fourth-content {
-        height: 70vh;
-    }
-    .model-burger {
-        width: 70%;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 100%;
-    }
-    .two-buttons {
-        flex-direction: column;
-    }
-    .gazette-imgs {
-        flex-direction: column;
-    }
-    .gazette-one, .gazette-two {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-}
-@media (max-width: 320px) {
-    :root {
-        /*Top Content CSS Responsive*/
-    --topcontent-mgTop: 120px;
-    --welcome-fs: 1.042rem;
-    --branches-wd: 210px;
-    --branches-hg: 25px;
-    --branches-fs: 10px;
-    --branches-pd: 0px 9px;
-    --branchList-hg: 12.5px;
-    --researchBtn-fs: 12px;
-    --researchBtn-pd: 5.5px 9px;
-    --border-rd: 2.08px;
-    --intro-gap: 9.58px;
-    --researchBranches-gap: 3.33px;
-
-        /*Fourth Content CSS Responsive*/
-    --fourthContent-mgTop: 83.33px;
-    --modelBurger-br: 3.33px;
-    --burgerOfTheDay-wd: 150px;
-    --infoContentPara-wd: 166.67px;
-    --recipe-fs: 5.83px;
-    --recipe-fw: 500;
-    --twoButtons-fs: 7.5px;
-    --twoButtons-pd: 3.33px 12.5px;
-    --twoButtons-gap: 4.17px;
-
-        /*Seventh Content CSS Responsive*/
-    --seventhContent-mg: 125px 0px 27.08px;
-    --newspaperWrapper-wd: 90%;
-    --newspaperWrapper-hg: 80vh;
-    --newspaper-br: 1.25px;
-    --newspaperHeading-fs: 29.17px;
-    --newspaperHeading-mg: 3.33px auto;
-    --latestNews-fs: 7.5px;
-    --latestNews-pd: 3.33px 12.5px;
-    --gazetteImgs-gap: 8.33px;
-    --gazetteImg-wd: 208.33px;
-    --gazetteImg-br: 2.08px;
-    --gazetteCaption-wd: 208.33px;
-    --gazetteCaption-fs: 6.25px;
-    --gazetteCaption-mgTop: 2.5px;
-    --gazetteNews-gap: 2.08px;
-    --gazetteDate-fs: 6.25px;
-    --gazetteDate-top: 8.33px;
-    --gazetteDate-left: 6.25px;
-    --gazetteOneDate-pd: 2.08px 6.67px;
-    --gazetteTwoDate-pd: 2.08px 6.67px;
-    }
-    /* Additional 768px layout rules scaled for this breakpoint */
-    .slider {
-        margin-top: 33.33px;
-    }
-    .slider-track img {
-        width: 91.67px;
-        margin-right: 8.33px;
-    }
-    .fourth-content {
-        height: 65vh;
-    }
-    .model-burger {
-        width: 70%;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 100%;
-    }
-    .two-buttons {
-        flex-direction: column;
-    }
-    .gazette-imgs {
-        flex-direction: column;
-    }
-    .gazette-one, .gazette-two {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+    .newspaper-wrapper {
+        max-height: none;
     }
 }

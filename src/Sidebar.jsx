@@ -1,19 +1,19 @@
 import { useState } from 'react'
-import Header from './Header'
 import './Sidebar.css'
-import Home from './assets/home.png'
-import Menu from './assets/menu.png'
-import Restaurants from './assets/restaurants.png'
-import History from './assets/history.png'
-import FranchiseSidebar from './assets/franchise-sidebar.png'
-import Contact from './assets/contact.png'
-import Logo from './assets/burger-shack-circle-logo.png'
+import Home from './assets/home.jpg'
+import Menu from './assets/menu.jpg'
+import Restaurants from './assets/restaurants.jpg'
+import History from './assets/history.jpg'
+import FranchiseSidebar from './assets/franchise-sidebar.jpg'
+import Contact from './assets/contact.jpg'
+import Logo from './assets/burger-shack-circle-logo.jpg'
 
 
 
 function Sidebar({sidebarOpen}) {
     const [hoveredItem, setHoveredItem] = useState(null);
     const [selectedItem, setSelectedItem] = useState(null);
+    const [logoContainerVisible, setLogoContainerVisible] = useState(false);
     const menuItems = [
     { name: 'HOME', image: Home },
     { name: 'MENU', image: Menu },
@@ -36,8 +36,8 @@ function Sidebar({sidebarOpen}) {
                <div className="list">
                 <ul>
                   {menuItems.map((item, index) => (
-                  <li key={item.name} onClick={() => setSelectedItem(index)} onMouseEnter={() => setHoveredItem(index)} onMouseLeave={() => setHoveredItem(null)}>
-                   <div className={`logo-container ${selectedItem === index ? 'logo-container-visible' : ""}`}><img src={Logo} alt="Burger Shack Logo" /></div> {item.name}
+                  <li key={item.name} onMouseEnter={() => { setHoveredItem(index); setSelectedItem(index); setLogoContainerVisible(true)}} onMouseLeave={() => {setHoveredItem(null); setSelectedItem(null); setLogoContainerVisible(false)}}>
+                   <div className={`logo-container ${selectedItem === index && logoContainerVisible ? 'logo-container-visible' : ""} `}><img src={Logo} alt="Burger Shack Logo" /></div> {item.name}
                   </li>))
                   }
                 </ul>
