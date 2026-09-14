@@ -75,8 +75,8 @@
     text-transform: uppercase;
     letter-spacing: -0.03em;
     font-size: var(--list-fs);
-    color: #FFB6C1;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.45);
+    color: #f996a5;
+    text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.45);
     display: flex;
     align-items: center;
     gap: var(--insideList-gap);
@@ -138,7 +138,6 @@
     }
     .list ul li {
         letter-spacing: 0.05px;
-        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.42);
     }
     .image-container {
         display: none;
@@ -152,16 +151,6 @@
         --logoContainer-wnh: 0;
         --listHover-pdLeft: 1.2vw;
     }
-    .list-and-image {
-        padding: 0 8%;
-    }
-    .list ul li {
-        letter-spacing: 0.05px;
-        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.42);
-    }
-    .image-container {
-        display: none;
-    }
 }
 @media (min-width: 500px) {
     :root {
@@ -173,13 +162,6 @@
     }
     .list-and-image {
         padding: 0 10%;
-    }
-    .list ul li {
-        letter-spacing: 0.05px;
-        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.42);
-    }
-    .image-container {
-        display: none;
     }
 }
 @media (min-width: 800px) {
@@ -199,6 +181,10 @@
     }
     .image-container {
         max-width: 19.5rem;
+    }
+    .list ul li {
+        color: #faa8b4;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.45);
     }
 }
 @media (min-width: 1200px) {
